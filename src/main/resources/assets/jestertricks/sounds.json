@@ -1,0 +1,74 @@
+{
+  "jester_laugh": {
+    "subtitle": "subtitles.jestertricks.jester_laugh",
+    "sounds": [
+      "jestertricks:jester_laugh"
+    ]
+  },
+  "boing": {
+    "subtitle": "subtitles.jestertricks.boing",
+    "sounds": [
+      "jestertricks:boing"
+    ]
+  },
+  "bang": {
+    "subtitle": "subtitles.jestertricks.bang",
+    "sounds": [
+      "jestertricks:bang"
+    ]
+  },
+  "bang_shot": {
+    "subtitle": "subtitles.jestertricks.bang_shot",
+    "sounds": [
+      "jestertricks:bang_shot"
+    ]
+  },
+  "card_throw": {
+    "subtitle": "subtitles.jestertricks.card_throw",
+    "sounds": [
+      "jestertricks:card_throw"
+    ]
+  },
+  "magic_poof": {
+    "subtitle": "subtitles.jestertricks.magic_poof",
+    "sounds": [
+      "jestertricks:magic_poof"
+    ]
+  },
+  "fart": {
+    "subtitle": "subtitles.jestertricks.fart",
+    "sounds": [
+      "jestertricks:fart"
+    ]
+  },
+  "squirt": {
+    "subtitle": "subtitles.jestertricks.squirt",
+    "sounds": [
+      "jestertricks:squirt"
+    ]
+  },
+  "jack_box": {
+    "subtitle": "subtitles.jestertricks.jack_box",
+    "sounds": [
+      "jestertricks:jack_box"
+    ]
+  },
+  "rift": {
+    "subtitle": "subtitles.jestertricks.rift",
+    "sounds": [
+      "jestertricks:rift"
+    ]
+  },
+  "bells": {
+    "subtitle": "subtitles.jestertricks.bells",
+    "sounds": [
+      "jestertricks:bells"
+    ]
+  },
+  "mirror": {
+    "subtitle": "subtitles.jestertricks.mirror",
+    "sounds": [
+      "jestertricks:mirror"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=false": {
+      "model": "jestertricks:block/surprise_box"
+    },
+    "open=true": {
+      "model": "jestertricks:block/surprise_box_open"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,permanent=false": {
+      "model": "jestertricks:block/fair_hoop"
+    },
+    "facing=north,permanent=true": {
+      "model": "jestertricks:block/fair_hoop_permanent"
+    },
+    "facing=east,permanent=false": {
+      "model": "jestertricks:block/fair_hoop",
+      "y": 90
+    },
+    "facing=east,permanent=true": {
+      "model": "jestertricks:block/fair_hoop_permanent",
+      "y": 90
+    },
+    "facing=south,permanent=false": {
+      "model": "jestertricks:block/fair_hoop",
+      "y": 180
+    },
+    "facing=south,permanent=true": {
+      "model": "jestertricks:block/fair_hoop_permanent",
+      "y": 180
+    },
+    "facing=west,permanent=false": {
+      "model": "jestertricks:block/fair_hoop",
+      "y": 270
+    },
+    "facing=west,permanent=true": {
+      "model": "jestertricks:block/fair_hoop_permanent",
+      "y": 270
+    }
+  }
+}

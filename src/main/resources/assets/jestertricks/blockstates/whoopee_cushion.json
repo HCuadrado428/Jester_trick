@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "jestertricks:block/whoopee_cushion"
+    },
+    "powered=true": {
+      "model": "jestertricks:block/whoopee_cushion_pressed"
+    }
+  }
+}
