@@ -52,9 +52,6 @@ public class ScarfHookEntity extends ThrowableItemProjectile {
             discard();
             return;
         }
-        if (tickCount % 2 == 0 && level() instanceof ServerLevel sl) {
-            drawScarves(sl, user.position().add(0, user.getBbHeight() * 0.6, 0), position());
-        }
         if (!hooked) {
             if (tickCount > 25) discard();
             return;

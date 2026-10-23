@@ -21,8 +21,7 @@ public final class ClientSetup {
                 ctx -> new OrientedItemRenderer<>(ctx, 1.0F, -90.0F, OrientedItemRenderer.Spin.NONE));
         event.registerEntityRenderer(ModEntities.BANG_FLAG.get(),
                 ctx -> new OrientedItemRenderer<>(ctx, 1.0F, 0.0F, OrientedItemRenderer.Spin.NONE));
-        event.registerEntityRenderer(ModEntities.SCARF_HOOK.get(),
-                ctx -> new OrientedItemRenderer<>(ctx, 0.8F, 0.0F, OrientedItemRenderer.Spin.TUMBLE));
+        event.registerEntityRenderer(ModEntities.SCARF_HOOK.get(), ScarfHookRenderer::new);
         event.registerEntityRenderer(ModEntities.RIFT.get(), NoopRenderer::new);
         event.registerEntityRenderer(ModEntities.JESTER_CLONE.get(), JesterCloneRenderer::new);
     }
