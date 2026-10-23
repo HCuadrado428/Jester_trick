@@ -48,7 +48,7 @@ public final class ClientTrueForm {
         event.setCanceled(true);
         rendering = true;
         try {
-            var p = event.getEntity();
+            if (!(event.getEntity() instanceof net.minecraft.client.player.AbstractClientPlayer p)) return;
             float yaw = net.minecraft.util.Mth.lerp(event.getPartialTick(), p.yRotO, p.getYRot());
             renderer.render(p, yaw, event.getPartialTick(), event.getPoseStack(), event.getMultiBufferSource(), event.getPackedLight());
         } finally {
