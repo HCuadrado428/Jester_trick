@@ -47,7 +47,17 @@ Todos los objetos funcionan únicamente para los jugadores que pongas en la conf
 
 Si la lista está vacía, cualquiera puede usarlos (así se puede probar el mod).
 
-## Compilar el .jar
+## Descargar el .jar ya compilado
+
+Cada vez que se suben cambios a GitHub, el repositorio compila el mod solo:
+
+1. Abre la pestaña **Actions** del repositorio.
+2. Entra en la última ejecución de **Compilar mod** (con el tick verde).
+3. Abajo, en **Artifacts**, descarga `jestertricks-jar`. Dentro está el `.jar`.
+
+Si la ejecución sale en rojo, el error aparece en el paso **Compilar**.
+
+## Compilar el .jar a mano
 
 1. Instala **JDK 17** (por ejemplo, Temurin 17).
 2. Abre una terminal en esta carpeta y ejecuta:
