@@ -182,5 +182,12 @@
   "screen.jestertricks.passive.night_vision": "Night vision",
   "screen.jestertricks.passive.night_vision.desc": "See in the dark, like in your home world.",
   "screen.jestertricks.passive.kill_laugh": "Victory laugh",
-  "screen.jestertricks.passive.kill_laugh.desc": "Laugh and burst into starry confetti when you defeat something."
+  "screen.jestertricks.passive.kill_laugh.desc": "Laugh and burst into starry confetti when you defeat something.",
+  "commands.jestertricks.added": "Added: %s. Jesters now: %s",
+  "commands.jestertricks.removed": "%s is no longer a Jester.",
+  "commands.jestertricks.not_found": "%s was not on the Jester list.",
+  "commands.jestertricks.list": "Jesters: %s",
+  "commands.jestertricks.list_empty": "There is no Jester: anyone can use the items.",
+  "commands.jestertricks.cleared": "Jester list cleared: anyone can use the items now.",
+  "commands.jestertricks.you_are_jester": "You hear distant laughter... You are now the Jester."
 }

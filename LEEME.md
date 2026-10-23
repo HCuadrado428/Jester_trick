@@ -70,7 +70,18 @@ Los proyectiles (naipe, cuchillo, banderita y nudo de pañuelos) vuelan con mode
 
 ## Solo para el Jester
 
-Todos los objetos funcionan únicamente para los jugadores que pongas en la configuración del servidor. Los demás reciben un aviso y una risita.
+Todos los objetos funcionan únicamente para los jugadores que sean Jester. Los demás reciben un aviso y una risita.
+
+La forma más fácil es con el comando (solo operadores, se aplica al momento sin reiniciar):
+
+| Comando | Qué hace |
+|---|---|
+| `/jester add <jugador>` | Lo convierte en Jester |
+| `/jester remove <jugador>` | Le quita el poder (aunque no esté conectado) |
+| `/jester list` | Dice quién es Jester |
+| `/jester clear` | Nadie es Jester (cualquiera puede usar los objetos) |
+
+También se puede hacer a mano en el archivo de configuración:
 
 1. Arranca el mundo o el servidor una vez con el mod.
 2. Abre `world/serverconfig/jestertricks-server.toml` (en un servidor, dentro de la carpeta del mundo).

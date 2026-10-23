@@ -182,5 +182,12 @@
   "screen.jestertricks.passive.night_vision": "Visión nocturna",
   "screen.jestertricks.passive.night_vision.desc": "Ves en la oscuridad, como en tu mundo de origen.",
   "screen.jestertricks.passive.kill_laugh": "Risa al vencer",
-  "screen.jestertricks.passive.kill_laugh.desc": "Te ríes y sueltas confeti con estrellas al acabar con algo."
+  "screen.jestertricks.passive.kill_laugh.desc": "Te ríes y sueltas confeti con estrellas al acabar con algo.",
+  "commands.jestertricks.added": "Añadidos: %s. Jesters ahora: %s",
+  "commands.jestertricks.removed": "%s ya no es Jester.",
+  "commands.jestertricks.not_found": "%s no estaba en la lista de Jesters.",
+  "commands.jestertricks.list": "Jesters: %s",
+  "commands.jestertricks.list_empty": "No hay ningún Jester: cualquiera puede usar los objetos.",
+  "commands.jestertricks.cleared": "Lista de Jesters vaciada: ahora cualquiera puede usar los objetos.",
+  "commands.jestertricks.you_are_jester": "Sientes una risa lejana... Ahora eres el Jester."
 }
