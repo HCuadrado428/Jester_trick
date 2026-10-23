@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "jestertricks:block/harlequin_block",
+    "top": "jestertricks:block/harlequin_block",
+    "side": "jestertricks:block/harlequin_block"
+  }
+}

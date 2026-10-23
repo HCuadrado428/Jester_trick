@@ -1,5 +1,7 @@
 package com.jester.jestertricks.item;
 
+import com.jester.jestertricks.registry.ModDamageTypes;
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.registry.ModSounds;
 import net.minecraft.core.BlockPos;
@@ -51,9 +53,9 @@ public class SquirtingFlowerItem extends Item {
                 if (dist > RANGE || to.normalize().dot(look) < 0.85) continue;
                 e.clearFire();
                 if (hatesWater(e)) {
-                    e.hurt(level.damageSources().indirectMagic(player, player), 14.0F);
+                    e.hurt(ModDamageTypes.of(level, ModDamageTypes.SQUIRT, player, player), JesterConfig.damage(14.0F));
                 } else {
-                    e.hurt(level.damageSources().playerAttack(player), 3.0F);
+                    e.hurt(ModDamageTypes.of(level, ModDamageTypes.SQUIRT, player, player), JesterConfig.damage(3.0F));
                 }
                 e.setDeltaMovement(e.getDeltaMovement().add(look.x * 1.4, 0.3, look.z * 1.4));
                 e.hurtMarked = true;
@@ -75,7 +77,7 @@ public class SquirtingFlowerItem extends Item {
             }
             player.clearFire();
             Fx.play(level, player.position(), ModSounds.SQUIRT.get(), 1.0F, Fx.pitch(level, 1.0F, 0.3F));
-            player.getCooldowns().addCooldown(this, 6);
+            player.getCooldowns().addCooldown(this, JesterConfig.cooldown(6));
         }
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
     }

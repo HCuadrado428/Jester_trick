@@ -1,5 +1,6 @@
 package com.jester.jestertricks.entity;
 
+import com.jester.jestertricks.registry.ModDamageTypes;
 import com.jester.jestertricks.registry.ModEntities;
 import com.jester.jestertricks.registry.ModItems;
 import com.jester.jestertricks.registry.ModSounds;
@@ -107,7 +108,7 @@ public class ThrownKnifeEntity extends ThrowableItemProjectile {
         super.onHitEntity(result);
         Entity target = result.getEntity();
         if (target instanceof LivingEntity living) living.invulnerableTime = 0;
-        target.hurt(damageSources().thrown(this, getOwner()), damage);
+        target.hurt(ModDamageTypes.of(level(), ModDamageTypes.KNIFE, this, getOwner()), damage);
         if (!level().isClientSide) startReturning();
     }
 

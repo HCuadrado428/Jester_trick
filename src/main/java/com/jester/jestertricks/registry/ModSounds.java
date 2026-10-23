@@ -22,6 +22,8 @@ public final class ModSounds {
     public static final RegistryObject<SoundEvent> RIFT = register("rift");
     public static final RegistryObject<SoundEvent> BELLS = register("bells");
     public static final RegistryObject<SoundEvent> MIRROR = register("mirror");
+    public static final RegistryObject<SoundEvent> SPLAT = register("splat");
+    public static final RegistryObject<SoundEvent> BALLOON_POP = register("balloon_pop");
 
     private static RegistryObject<SoundEvent> register(String name) {
         return SOUNDS.register(name, () -> SoundEvent.createVariableRangeEvent(JesterTricks.id(name)));

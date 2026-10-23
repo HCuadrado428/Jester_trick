@@ -32,6 +32,35 @@ Armas y trucos del Jester, el bufón arlequín. Todo sale **solo de la pestaña 
 
 La Varita ahora abre mini portales en cada extremo del salto.
 
+### Trucos de feria
+
+| Objeto | Qué hace |
+|---|---|
+| Bolos de Malabares | Lanza 3 bolos que rebotan de un enemigo a otro (cada bolo golpea hasta 3 veces). |
+| Globo de Payaso | Sobre una criatura o jugador: le ata un globo que lo eleva 5 segundos; al explotar baja flotando. Al aire: te lo atas tú. |
+| Tarta en la Cara | ¡SPLAT! Ciega, marea y ralentiza. Infinitas. |
+| Cañón de Circo (bloque) | Clic derecho: el Jester sale disparado hacia donde mira y aterriza sin daño. |
+
+**Decoración** (cualquiera puede colocarla): Bloque, Losa y Escaleras Arlequín, Lona de Carpa y su losa, Farolillo de Feria y Cartel de Feria.
+
+### Poderes con tecla (sin llevar nada en la mano)
+
+Se cambian en *Opciones > Controles > Jester's Tricks*.
+
+| Tecla | Poder |
+|---|---|
+| G | **Carcajada**: los monstruos cercanos huyen y quedan debilitados. |
+| V | **Lluvia de confeti**: ciega y frena un momento a todo lo que te rodea. |
+| R | **Paso de sombra**: 3 segundos invisible, rápido y los golpes te atraviesan. |
+
+### Pasivas del Jester
+
+- No recibe daño de caída (aterriza con confeti).
+- Visión nocturna permanente.
+- Cada vez que acaba con algo, se ríe y suelta confeti con estrellas.
+
+Cada arma tiene su propio mensaje de muerte ("X se llevó una tarta en la cara de Y", "X hizo ¡BOING! por última vez"...).
+
 **Pranked!**: mientras dura, la armadura pierde sus encantamientos (Protección y sus variantes, Caída de pluma y Espinas).
 
 Los proyectiles (naipe, cuchillo, banderita y nudo de pañuelos) vuelan con modelos 3D.
@@ -47,17 +76,11 @@ Todos los objetos funcionan únicamente para los jugadores que pongas en la conf
 
 Si la lista está vacía, cualquiera puede usarlos (así se puede probar el mod).
 
-## Descargar el .jar ya compilado
+En el mismo archivo, en `[balance]`:
+- `damageMultiplier`: multiplica el daño de todas las armas y trucos (1.0 normal, 0.5 la mitad, 2.0 el doble).
+- `cooldownMultiplier`: multiplica los tiempos de recarga (0.5 el doble de rápido, 2.0 el doble de lento).
 
-Cada vez que se suben cambios a GitHub, el repositorio compila el mod solo:
-
-1. Abre la pestaña **Actions** del repositorio.
-2. Entra en la última ejecución de **Compilar mod** (con el tick verde).
-3. Abajo, en **Artifacts**, descarga `jestertricks-jar`. Dentro está el `.jar`.
-
-Si la ejecución sale en rojo, el error aparece en el paso **Compilar**.
-
-## Compilar el .jar a mano
+## Compilar el .jar
 
 1. Instala **JDK 17** (por ejemplo, Temurin 17).
 2. Abre una terminal en esta carpeta y ejecuta:

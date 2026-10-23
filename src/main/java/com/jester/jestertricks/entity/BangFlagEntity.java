@@ -1,5 +1,6 @@
 package com.jester.jestertricks.entity;
 
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.item.Fx;
 import com.jester.jestertricks.registry.ModDamageTypes;
 import com.jester.jestertricks.registry.ModEffects;
@@ -79,7 +80,7 @@ public class BangFlagEntity extends ThrowableItemProjectile {
         for (LivingEntity e : level.getEntitiesOfClass(LivingEntity.class, area,
                 e -> e.isAlive() && e != owner && e.distanceToSqr(at) <= RADIUS * RADIUS)) {
             // nunca mata: como mucho deja 1 de vida (medio corazón)
-            float dmg = Math.min(BLAST_DAMAGE, e.getHealth() - 1.0F);
+            float dmg = Math.min(JesterConfig.damage(BLAST_DAMAGE), e.getHealth() - 1.0F);
             if (dmg > 0) {
                 e.invulnerableTime = 0;
                 e.hurt(ModDamageTypes.bang(level, this, owner), dmg);

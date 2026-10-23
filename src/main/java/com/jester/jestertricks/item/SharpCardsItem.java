@@ -1,5 +1,6 @@
 package com.jester.jestertricks.item;
 
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.entity.ThrownCardEntity;
 import com.jester.jestertricks.registry.ModSounds;
@@ -17,8 +18,8 @@ import java.util.List;
 
 /**
  * Naipes Afilados (infinitos).
- * Clic derecho: abanico de 3 cartas (10 de daño cada una).
- * Agachado + clic derecho: una sola carta "as de picas" (24 de daño, más rápida).
+ * Clic derecho: abanico de 3 cartas (7 de daño cada una).
+ * Agachado + clic derecho: una sola carta "as de picas" (16 de daño, más rápida).
  */
 public class SharpCardsItem extends Item {
     public SharpCardsItem(Properties props) {
@@ -31,13 +32,13 @@ public class SharpCardsItem extends Item {
         if (!JesterLock.check(player)) return InteractionResultHolder.fail(stack);
         if (!level.isClientSide) {
             if (player.isShiftKeyDown()) {
-                throwCard(level, player, 0.0F, 24.0F, 3.4F);
-                player.getCooldowns().addCooldown(this, 14);
+                throwCard(level, player, 0.0F, JesterConfig.damage(16.0F), 3.4F);
+                player.getCooldowns().addCooldown(this, JesterConfig.cooldown(16));
             } else {
                 for (int i = -1; i <= 1; i++) {
-                    throwCard(level, player, i * 9.0F, 10.0F, 2.8F);
+                    throwCard(level, player, i * 9.0F, JesterConfig.damage(7.0F), 2.8F);
                 }
-                player.getCooldowns().addCooldown(this, 8);
+                player.getCooldowns().addCooldown(this, JesterConfig.cooldown(12));
             }
             Fx.play(level, player.position(), ModSounds.CARD_THROW.get(), 0.9F, Fx.pitch(level, 1.1F, 0.3F));
         }

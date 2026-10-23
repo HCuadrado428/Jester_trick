@@ -88,7 +88,7 @@ public class ScarfHookRenderer extends OrientedItemRenderer<ScarfHookEntity> {
         return base.add(0, user.getBbHeight() * 0.55, 0).add(right.scale(0.4)).add(fwd.scale(0.25));
     }
 
-    private static void strip(VertexConsumer vc, PoseStack.Pose last, Vec3 a, Vec3 b, Vec3 side,
+    static void strip(VertexConsumer vc, PoseStack.Pose last, Vec3 a, Vec3 b, Vec3 side,
                               float u0, float u1, int light) {
         Matrix4f m = last.pose();
         Matrix3f n = last.normal();

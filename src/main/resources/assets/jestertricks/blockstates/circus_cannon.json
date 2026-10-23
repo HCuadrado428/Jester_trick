@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jestertricks:block/circus_cannon"
+    },
+    "facing=east": {
+      "model": "jestertricks:block/circus_cannon",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "jestertricks:block/circus_cannon",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "jestertricks:block/circus_cannon",
+      "y": 270
+    }
+  }
+}

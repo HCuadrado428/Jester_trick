@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "jestertricks:block/circus_tent_slab"
+    },
+    "type=top": {
+      "model": "jestertricks:block/circus_tent_slab_top"
+    },
+    "type=double": {
+      "model": "jestertricks:block/circus_tent"
+    }
+  }
+}

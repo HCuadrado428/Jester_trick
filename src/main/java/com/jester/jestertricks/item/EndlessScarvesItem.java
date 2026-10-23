@@ -1,5 +1,6 @@
 package com.jester.jestertricks.item;
 
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.entity.ScarfHookEntity;
 import com.jester.jestertricks.registry.ModSounds;
@@ -34,7 +35,7 @@ public class EndlessScarvesItem extends Item {
             hook.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 2.6F, 0.0F);
             level.addFreshEntity(hook);
             Fx.play(level, player.position(), ModSounds.CARD_THROW.get(), 0.9F, 0.6F);
-            player.getCooldowns().addCooldown(this, 20);
+            player.getCooldowns().addCooldown(this, JesterConfig.cooldown(20));
         }
         player.swing(hand);
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());

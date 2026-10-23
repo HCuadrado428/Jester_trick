@@ -1,0 +1,489 @@
+{
+  "credit": "Jester's Tricks",
+  "textures": {
+    "particle": "jestertricks:item/clown_balloon",
+    "balloon": "jestertricks:item/model/mat_balloon",
+    "black": "jestertricks:item/model/mat_black",
+    "white": "jestertricks:item/model/mat_white"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        5,
+        4
+      ],
+      "to": [
+        12,
+        15,
+        12
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#balloon"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#balloon"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#balloon"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#balloon"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#balloon"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": "#balloon"
+        }
+      }
+    },
+    {
+      "from": [
+        3,
+        7,
+        5
+      ],
+      "to": [
+        13,
+        13,
+        11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            10,
+            6
+          ],
+          "texture": "#balloon"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            10,
+            6
+          ],
+          "texture": "#balloon"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            6,
+            6
+          ],
+          "texture": "#balloon"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            6,
+            6
+          ],
+          "texture": "#balloon"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            10,
+            6
+          ],
+          "texture": "#balloon"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            10,
+            6
+          ],
+          "texture": "#balloon"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        7,
+        3
+      ],
+      "to": [
+        11,
+        13,
+        13
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            6,
+            6
+          ],
+          "texture": "#balloon"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            6,
+            6
+          ],
+          "texture": "#balloon"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            10,
+            6
+          ],
+          "texture": "#balloon"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            10,
+            6
+          ],
+          "texture": "#balloon"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            6,
+            10
+          ],
+          "texture": "#balloon"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            6,
+            10
+          ],
+          "texture": "#balloon"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        15,
+        5
+      ],
+      "to": [
+        11,
+        16,
+        11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            6,
+            1
+          ],
+          "texture": "#balloon"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            6,
+            1
+          ],
+          "texture": "#balloon"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            6,
+            1
+          ],
+          "texture": "#balloon"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            6,
+            1
+          ],
+          "texture": "#balloon"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            6,
+            6
+          ],
+          "texture": "#balloon"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            6,
+            6
+          ],
+          "texture": "#balloon"
+        }
+      }
+    },
+    {
+      "from": [
+        7,
+        3.5,
+        7
+      ],
+      "to": [
+        9,
+        5,
+        9
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            2,
+            1.5
+          ],
+          "texture": "#balloon"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            2,
+            1.5
+          ],
+          "texture": "#balloon"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            2,
+            1.5
+          ],
+          "texture": "#balloon"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            2,
+            1.5
+          ],
+          "texture": "#balloon"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#balloon"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#balloon"
+        }
+      }
+    },
+    {
+      "from": [
+        7.7,
+        -4,
+        7.7
+      ],
+      "to": [
+        8.3,
+        3.5,
+        8.3
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            0.6,
+            7.5
+          ],
+          "texture": "#white"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            0.6,
+            7.5
+          ],
+          "texture": "#white"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            0.6,
+            7.5
+          ],
+          "texture": "#white"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            0.6,
+            7.5
+          ],
+          "texture": "#white"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            0.6,
+            0.6
+          ],
+          "texture": "#white"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            0.6,
+            0.6
+          ],
+          "texture": "#white"
+        }
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "head": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        9,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  }
+}

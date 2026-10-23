@@ -1,5 +1,6 @@
 package com.jester.jestertricks.item;
 
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.registry.ModSounds;
 import net.minecraft.core.particles.ParticleTypes;
@@ -78,7 +79,7 @@ public class MagicTopHatItem extends Item {
             sl.sendParticles(ParticleTypes.WITCH, spot.x, spot.y, spot.z, 12, 0.3, 0.3, 0.3, 0.1);
             Fx.confetti(sl, spot, 6, 0.4);
             Fx.play(level, spot, ModSounds.MAGIC_POOF.get(), 1.0F, Fx.pitch(level, 1.0F, 0.2F));
-            player.getCooldowns().addCooldown(this, 40);
+            player.getCooldowns().addCooldown(this, JesterConfig.cooldown(40));
         }
         player.swing(hand);
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());

@@ -1,0 +1,21 @@
+{
+  "loader": "forge:separate_transforms",
+  "gui_light": "front",
+  "base": {
+    "parent": "jestertricks:item/juggling_pin_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "minecraft:item/generated",
+      "textures": {
+        "layer0": "jestertricks:item/juggling_pin"
+      }
+    },
+    "fixed": {
+      "parent": "minecraft:item/generated",
+      "textures": {
+        "layer0": "jestertricks:item/juggling_pin"
+      }
+    }
+  }
+}

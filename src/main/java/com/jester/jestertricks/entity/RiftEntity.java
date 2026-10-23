@@ -47,7 +47,7 @@ public class RiftEntity extends Entity {
         if (level().isClientSide || !(level() instanceof ServerLevel sl)) return;
         age++;
         double radius = Math.min(1.0, 0.2 + age * 0.08);
-        if (age % 2 == 0) Fx.rift(sl, position(), getYRot(), radius);
+        if (age % 5 == 0) Fx.rift(sl, position(), getYRot(), radius);
 
         Player p = owner == null ? null : level().getPlayerByUUID(owner);
         if (p instanceof ServerPlayer sp && sp.distanceToSqr(this) < 16.0) {

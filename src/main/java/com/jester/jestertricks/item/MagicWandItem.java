@@ -1,5 +1,6 @@
 package com.jester.jestertricks.item;
 
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.registry.ModSounds;
 import net.minecraft.core.BlockPos;
@@ -93,10 +94,10 @@ public class MagicWandItem extends Item {
 
         if (done) {
             Fx.play(level, player.position(), ModSounds.RIFT.get(), 0.8F, Fx.pitch(level, 1.5F, 0.2F));
-            player.getCooldowns().addCooldown(this, 30);
+            player.getCooldowns().addCooldown(this, JesterConfig.cooldown(30));
         } else {
             Fx.play(level, player.position(), ModSounds.JESTER_LAUGH.get(), 0.4F, 1.6F);
-            player.getCooldowns().addCooldown(this, 10);
+            player.getCooldowns().addCooldown(this, JesterConfig.cooldown(10));
         }
         return InteractionResultHolder.sidedSuccess(stack, false);
     }

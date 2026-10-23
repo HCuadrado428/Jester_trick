@@ -1,5 +1,8 @@
 package com.jester.jestertricks.block;
 
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.level.BlockGetter;
 import com.jester.jestertricks.item.Fx;
 import com.jester.jestertricks.registry.ModSounds;
 import net.minecraft.core.BlockPos;
@@ -31,6 +34,18 @@ public class SurpriseBoxBlock extends Block {
     public SurpriseBoxBlock(Properties props) {
         super(props);
         registerDefaultState(stateDefinition.any().setValue(OPEN, false));
+    }
+
+    private static final VoxelShape SHAPE = Block.box(1.5, 0, 1.5, 14.5, 12.5, 14.5);
+
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
+        return SHAPE;
+    }
+
+    @Override
+    public boolean useShapeForLightOcclusion(BlockState state) {
+        return true;
     }
 
     @Override

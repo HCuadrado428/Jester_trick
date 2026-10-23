@@ -1,5 +1,6 @@
 package com.jester.jestertricks.entity;
 
+import com.jester.jestertricks.registry.ModDamageTypes;
 import com.jester.jestertricks.registry.ModEntities;
 import com.jester.jestertricks.registry.ModItems;
 import net.minecraft.core.particles.ParticleTypes;
@@ -52,7 +53,7 @@ public class ThrownCardEntity extends ThrowableItemProjectile {
         if (target instanceof LivingEntity living) {
             living.invulnerableTime = 0;   // que el abanico entero pueda cortar al mismo objetivo
         }
-        target.hurt(damageSources().thrown(this, getOwner()), damage);
+        target.hurt(ModDamageTypes.of(level(), ModDamageTypes.CARD, this, getOwner()), damage);
     }
 
     @Override

@@ -1,5 +1,7 @@
 package com.jester.jestertricks.item;
 
+import com.jester.jestertricks.registry.ModDamageTypes;
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.registry.ModSounds;
 import net.minecraft.core.particles.ParticleTypes;
@@ -26,7 +28,7 @@ import java.util.List;
  * que marea, ciega, ralentiza y hiere a todo lo que haya a 7 bloques.
  */
 public class JesterScepterItem extends SwordItem {
-    private static final int COOLDOWN = 100;
+    private static final int COOLDOWN = 120;
 
     public JesterScepterItem(Properties props) {
         super(JesterTier.INSTANCE, 15, -2.2F, props);
@@ -54,13 +56,13 @@ public class JesterScepterItem extends SwordItem {
                 e.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0), player);
                 e.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 80, 0), player);
                 e.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 2), player);
-                e.hurt(level.damageSources().indirectMagic(player, player), 6.0F);
+                e.hurt(ModDamageTypes.of(level, ModDamageTypes.PETALS, player, player), JesterConfig.damage(6.0F));
                 sl.sendParticles(ParticleTypes.SQUID_INK, e.getX(), e.getY(0.8), e.getZ(), 6, 0.3, 0.3, 0.3, 0.02);
             }
             Fx.petalRing(sl, player.position(), 2.5, 24);
             Fx.petalRing(sl, player.position(), 5.0, 40);
             Fx.play(level, player.position(), ModSounds.JESTER_LAUGH.get(), 1.0F, Fx.pitch(level, 0.95F, 0.15F));
-            player.getCooldowns().addCooldown(this, COOLDOWN);
+            player.getCooldowns().addCooldown(this, JesterConfig.cooldown(COOLDOWN));
         }
         player.swing(hand);
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());

@@ -1,5 +1,6 @@
 package com.jester.jestertricks.item;
 
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.registry.ModSounds;
 import net.minecraft.core.particles.ParticleTypes;
@@ -54,7 +55,7 @@ public class SmokeBombItem extends Item {
             sl.sendParticles(ParticleTypes.POOF, c.x, c.y + 1.0, c.z, 30, 0.8, 0.8, 0.8, 0.05);
             Fx.play(level, c, ModSounds.MAGIC_POOF.get(), 1.2F, 0.7F);
             Fx.play(level, c, ModSounds.JESTER_LAUGH.get(), 0.6F, Fx.pitch(level, 1.1F, 0.2F));
-            player.getCooldowns().addCooldown(this, 200);
+            player.getCooldowns().addCooldown(this, JesterConfig.cooldown(200));
         }
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
     }

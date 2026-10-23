@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jestertricks:block/fair_sign"
+    },
+    "facing=east": {
+      "model": "jestertricks:block/fair_sign",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "jestertricks:block/fair_sign",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "jestertricks:block/fair_sign",
+      "y": 270
+    }
+  }
+}

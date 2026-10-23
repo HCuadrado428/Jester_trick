@@ -1,5 +1,6 @@
 package com.jester.jestertricks.item;
 
+import com.jester.jestertricks.registry.ModParticles;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -21,6 +22,7 @@ public final class Fx {
         level.sendParticles(WHITE, pos.x, pos.y, pos.z, count, spread, spread, spread, 0.1);
         level.sendParticles(GREY, pos.x, pos.y, pos.z, count, spread, spread, spread, 0.1);
         level.sendParticles(BLACK, pos.x, pos.y, pos.z, count, spread, spread, spread, 0.1);
+        level.sendParticles(ModParticles.ORIGIN_STAR.get(), pos.x, pos.y, pos.z, Math.max(1, count / 4), spread, spread, spread, 0.02);
     }
 
     /** Anillo de pétalos negros alrededor de un punto. */
@@ -51,15 +53,9 @@ public final class Fx {
             double h2 = Math.cos(t) * (radius + 0.15), v2 = Math.sin(t) * (radius + 0.15) * 1.35;
             level.sendParticles(WHITE, c.x + rx * h2, c.y + v2, c.z + rz * h2, 1, 0, 0, 0, 0);
         }
-        // estrella del origen: cuatro puntas blancas y núcleo negro
-        double s = radius * 0.75;
-        for (int k = 0; k <= 8; k++) {
-            double f = k / 8.0;
-            level.sendParticles(WHITE, c.x, c.y + s * f, c.z, 1, 0, 0, 0, 0);
-            level.sendParticles(WHITE, c.x, c.y - s * f, c.z, 1, 0, 0, 0, 0);
-            level.sendParticles(WHITE, c.x + rx * s * f * 0.75, c.y, c.z + rz * s * f * 0.75, 1, 0, 0, 0, 0);
-            level.sendParticles(WHITE, c.x - rx * s * f * 0.75, c.y, c.z - rz * s * f * 0.75, 1, 0, 0, 0, 0);
-        }
+        // estrella del origen en el centro y alguna suelta alrededor
+        level.sendParticles(ModParticles.ORIGIN_STAR.get(), c.x, c.y, c.z, 1, 0, 0, 0, 0);
+        level.sendParticles(ModParticles.ORIGIN_STAR.get(), c.x, c.y, c.z, 3, radius * 0.6, radius * 0.7, radius * 0.6, 0.01);
         level.sendParticles(ParticleTypes.SQUID_INK, c.x, c.y, c.z, 6, 0.08, 0.08, 0.08, 0.01);
         level.sendParticles(ParticleTypes.REVERSE_PORTAL, c.x, c.y, c.z, 12, radius * 0.4, radius * 0.5, radius * 0.4, 0.02);
     }

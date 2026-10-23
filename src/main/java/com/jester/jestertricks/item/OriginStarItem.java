@@ -1,5 +1,6 @@
 package com.jester.jestertricks.item;
 
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.entity.RiftEntity;
 import com.jester.jestertricks.portal.OriginTravel;
@@ -72,7 +73,7 @@ public class OriginStarItem extends Item {
         Vec3 at = player.position().add(look.x * 1.8, 1.0, look.z * 1.8);
         level.addFreshEntity(RiftEntity.open(level, player, at, destination(stack, level)));
         Fx.play(level, at, ModSounds.RIFT.get(), 1.0F, 0.8F);
-        player.getCooldowns().addCooldown(this, 60);
+        player.getCooldowns().addCooldown(this, JesterConfig.cooldown(60));
         return InteractionResultHolder.success(stack);
     }
 

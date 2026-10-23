@@ -36,6 +36,17 @@ public final class ModCreativeTab {
                         output.accept(ModItems.FATE_DECK.get());
                         output.accept(ModItems.LAUGH_MIRROR.get());
                         output.accept(ModItems.JESTER_BELLS.get());
+                        output.accept(ModItems.JUGGLING_PINS.get());
+                        output.accept(ModItems.CLOWN_BALLOON.get());
+                        output.accept(ModItems.CREAM_PIE.get());
+                        output.accept(ModItems.CIRCUS_CANNON.get());
+                        output.accept(ModItems.HARLEQUIN_BLOCK.get());
+                        output.accept(ModItems.HARLEQUIN_SLAB.get());
+                        output.accept(ModItems.HARLEQUIN_STAIRS.get());
+                        output.accept(ModItems.CIRCUS_TENT.get());
+                        output.accept(ModItems.CIRCUS_TENT_SLAB.get());
+                        output.accept(ModItems.FAIR_LANTERN.get());
+                        output.accept(ModItems.FAIR_SIGN.get());
                     })
                     .build());
 

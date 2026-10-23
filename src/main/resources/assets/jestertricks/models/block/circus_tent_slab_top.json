@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "jestertricks:block/circus_tent",
+    "top": "jestertricks:block/circus_tent",
+    "side": "jestertricks:block/circus_tent"
+  }
+}

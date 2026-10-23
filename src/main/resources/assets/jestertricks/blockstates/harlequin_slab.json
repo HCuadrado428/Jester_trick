@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "jestertricks:block/harlequin_slab"
+    },
+    "type=top": {
+      "model": "jestertricks:block/harlequin_slab_top"
+    },
+    "type=double": {
+      "model": "jestertricks:block/harlequin_block"
+    }
+  }
+}

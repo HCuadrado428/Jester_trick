@@ -2,9 +2,10 @@ package com.jester.jestertricks.client;
 
 import com.jester.jestertricks.JesterTricks;
 import com.jester.jestertricks.registry.ModEntities;
-import net.minecraft.client.renderer.entity.NoopRenderer;
+import com.jester.jestertricks.registry.ModParticles;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -22,8 +23,18 @@ public final class ClientSetup {
         event.registerEntityRenderer(ModEntities.BANG_FLAG.get(),
                 ctx -> new OrientedItemRenderer<>(ctx, 1.0F, 0.0F, OrientedItemRenderer.Spin.NONE));
         event.registerEntityRenderer(ModEntities.SCARF_HOOK.get(), ScarfHookRenderer::new);
-        event.registerEntityRenderer(ModEntities.RIFT.get(), NoopRenderer::new);
+        event.registerEntityRenderer(ModEntities.JUGGLING_PIN.get(),
+                ctx -> new OrientedItemRenderer<>(ctx, 0.9F, -90.0F, OrientedItemRenderer.Spin.TUMBLE));
+        event.registerEntityRenderer(ModEntities.CREAM_PIE.get(),
+                ctx -> new OrientedItemRenderer<>(ctx, 0.9F, 0.0F, OrientedItemRenderer.Spin.NONE));
+        event.registerEntityRenderer(ModEntities.CLOWN_BALLOON.get(), ClownBalloonRenderer::new);
+        event.registerEntityRenderer(ModEntities.RIFT.get(), RiftRenderer::new);
         event.registerEntityRenderer(ModEntities.JESTER_CLONE.get(), JesterCloneRenderer::new);
+    }
+
+    @SubscribeEvent
+    public static void registerParticles(RegisterParticleProvidersEvent event) {
+        event.registerSpriteSet(ModParticles.ORIGIN_STAR.get(), OriginStarParticle.Provider::new);
     }
 
     private ClientSetup() {}

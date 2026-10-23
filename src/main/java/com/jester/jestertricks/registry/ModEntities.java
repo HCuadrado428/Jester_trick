@@ -2,6 +2,9 @@ package com.jester.jestertricks.registry;
 
 import com.jester.jestertricks.JesterTricks;
 import com.jester.jestertricks.entity.BangFlagEntity;
+import com.jester.jestertricks.entity.ClownBalloonEntity;
+import com.jester.jestertricks.entity.CreamPieEntity;
+import com.jester.jestertricks.entity.JugglingPinEntity;
 import com.jester.jestertricks.entity.JesterCloneEntity;
 import com.jester.jestertricks.entity.RiftEntity;
 import com.jester.jestertricks.entity.ScarfHookEntity;
@@ -41,6 +44,18 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<JesterCloneEntity>> JESTER_CLONE = ENTITIES.register("jester_clone",
             () -> EntityType.Builder.<JesterCloneEntity>of(JesterCloneEntity::new, MobCategory.MISC)
                     .sized(0.6F, 1.8F).clientTrackingRange(8).build("jester_clone"));
+
+    public static final RegistryObject<EntityType<JugglingPinEntity>> JUGGLING_PIN = ENTITIES.register("juggling_pin",
+            () -> EntityType.Builder.<JugglingPinEntity>of(JugglingPinEntity::new, MobCategory.MISC)
+                    .sized(0.35F, 0.35F).clientTrackingRange(6).updateInterval(1).build("juggling_pin"));
+
+    public static final RegistryObject<EntityType<CreamPieEntity>> CREAM_PIE = ENTITIES.register("cream_pie",
+            () -> EntityType.Builder.<CreamPieEntity>of(CreamPieEntity::new, MobCategory.MISC)
+                    .sized(0.4F, 0.4F).clientTrackingRange(6).updateInterval(2).build("cream_pie"));
+
+    public static final RegistryObject<EntityType<ClownBalloonEntity>> CLOWN_BALLOON = ENTITIES.register("clown_balloon",
+            () -> EntityType.Builder.<ClownBalloonEntity>of(ClownBalloonEntity::new, MobCategory.MISC)
+                    .sized(0.6F, 0.8F).clientTrackingRange(8).updateInterval(1).build("clown_balloon"));
 
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(JESTER_CLONE.get(), JesterCloneEntity.createAttributes().build());

@@ -1,0 +1,150 @@
+{
+  "parent": "minecraft:block/block",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "particle": "jestertricks:block/fair_sign",
+    "sign": "jestertricks:block/fair_sign"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        2,
+        14
+      ],
+      "to": [
+        16,
+        14,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            12
+          ],
+          "texture": "#sign"
+        },
+        "south": {
+          "uv": [
+            0,
+            12,
+            16,
+            16
+          ],
+          "texture": "#sign"
+        },
+        "east": {
+          "uv": [
+            0,
+            12,
+            1,
+            16
+          ],
+          "texture": "#sign"
+        },
+        "west": {
+          "uv": [
+            0,
+            12,
+            1,
+            16
+          ],
+          "texture": "#sign"
+        },
+        "up": {
+          "uv": [
+            0,
+            12,
+            16,
+            13
+          ],
+          "texture": "#sign"
+        },
+        "down": {
+          "uv": [
+            0,
+            12,
+            16,
+            13
+          ],
+          "texture": "#sign"
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    }
+  }
+}

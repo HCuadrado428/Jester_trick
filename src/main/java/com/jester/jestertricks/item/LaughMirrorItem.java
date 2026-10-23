@@ -1,5 +1,6 @@
 package com.jester.jestertricks.item;
 
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.entity.JesterCloneEntity;
 import com.jester.jestertricks.registry.ModSounds;
@@ -50,7 +51,7 @@ public class LaughMirrorItem extends Item {
             }
             Fx.play(level, player.position(), ModSounds.MIRROR.get(), 1.0F, 1.0F);
             Fx.play(level, player.position(), ModSounds.JESTER_LAUGH.get(), 0.8F, 1.1F);
-            player.getCooldowns().addCooldown(this, 300);
+            player.getCooldowns().addCooldown(this, JesterConfig.cooldown(300));
         }
         player.swing(hand);
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());

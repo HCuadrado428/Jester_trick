@@ -1,5 +1,6 @@
 package com.jester.jestertricks.item;
 
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.entity.BangFlagEntity;
 import com.jester.jestertricks.registry.ModSounds;
@@ -34,7 +35,7 @@ public class BangPistolItem extends Item {
             flag.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 3.0F, 0.1F);
             level.addFreshEntity(flag);
             Fx.play(level, player.position(), ModSounds.BANG_SHOT.get(), 1.0F, Fx.pitch(level, 1.0F, 0.2F));
-            player.getCooldowns().addCooldown(this, 12);
+            player.getCooldowns().addCooldown(this, JesterConfig.cooldown(12));
         }
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
     }

@@ -1,5 +1,7 @@
 package com.jester.jestertricks.item;
 
+import com.jester.jestertricks.registry.ModDamageTypes;
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.registry.ModSounds;
 import net.minecraft.core.particles.ParticleTypes;
@@ -56,7 +58,7 @@ public class RubberMalletItem extends SwordItem {
                 Vec3 away = e.position().subtract(c);
                 away = new Vec3(away.x, 0, away.z);
                 away = away.lengthSqr() < 1.0E-4 ? Vec3.ZERO : away.normalize();
-                e.hurt(level.damageSources().playerAttack(player), 4.0F);
+                e.hurt(ModDamageTypes.of(level, ModDamageTypes.MALLET, player, player), JesterConfig.damage(4.0F));
                 e.setDeltaMovement(away.x * 1.2, 1.3, away.z * 1.2);
                 e.hurtMarked = true;
             }
@@ -67,7 +69,7 @@ public class RubberMalletItem extends SwordItem {
             }
             Fx.confetti(sl, c.add(0, 0.5, 0), 12, 1.5);
             Fx.play(level, c, ModSounds.BOING.get(), 1.4F, 0.6F);
-            player.getCooldowns().addCooldown(this, 40);
+            player.getCooldowns().addCooldown(this, JesterConfig.cooldown(40));
         }
         player.swing(hand);
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());

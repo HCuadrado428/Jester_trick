@@ -70,5 +70,17 @@
     "sounds": [
       "jestertricks:mirror"
     ]
+  },
+  "splat": {
+    "subtitle": "subtitles.jestertricks.splat",
+    "sounds": [
+      "jestertricks:splat"
+    ]
+  },
+  "balloon_pop": {
+    "subtitle": "subtitles.jestertricks.balloon_pop",
+    "sounds": [
+      "jestertricks:balloon_pop"
+    ]
   }
 }

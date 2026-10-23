@@ -1,5 +1,7 @@
 package com.jester.jestertricks.entity;
 
+import com.jester.jestertricks.registry.ModDamageTypes;
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.item.Fx;
 import com.jester.jestertricks.registry.ModEntities;
 import com.jester.jestertricks.registry.ModItems;
@@ -114,7 +116,7 @@ public class ScarfHookEntity extends ThrowableItemProjectile {
             target.setDeltaMovement(dir.x * 1.6, 0.45, dir.z * 1.6);
             target.hurtMarked = true;
         }
-        target.hurt(damageSources().thrown(this, owner), 4.0F);
+        target.hurt(ModDamageTypes.of(level(), ModDamageTypes.SCARF, this, owner), JesterConfig.damage(4.0F));
         discard();
     }
 }

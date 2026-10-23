@@ -1,5 +1,6 @@
 package com.jester.jestertricks.item;
 
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.registry.ModEffects;
 import com.jester.jestertricks.registry.ModSounds;
@@ -47,7 +48,7 @@ public class JesterBellsItem extends Item {
                 sl.sendParticles(ParticleTypes.NOTE, player.getX() + Math.cos(a) * 2, player.getY() + 1.5, player.getZ() + Math.sin(a) * 2, 1, 0, 0, 0, i / 16.0);
             }
             Fx.play(level, player.position(), ModSounds.BELLS.get(), 1.2F, Fx.pitch(level, 1.0F, 0.15F));
-            player.getCooldowns().addCooldown(this, 160);
+            player.getCooldowns().addCooldown(this, JesterConfig.cooldown(160));
         }
         player.swing(hand);
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());

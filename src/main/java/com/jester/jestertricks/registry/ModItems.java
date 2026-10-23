@@ -2,6 +2,9 @@ package com.jester.jestertricks.registry;
 
 import com.jester.jestertricks.JesterTricks;
 import com.jester.jestertricks.item.BangPistolItem;
+import com.jester.jestertricks.item.ClownBalloonItem;
+import com.jester.jestertricks.item.CreamPieItem;
+import com.jester.jestertricks.item.JugglingPinsItem;
 import com.jester.jestertricks.item.BlackBoxItem;
 import com.jester.jestertricks.item.FairHoopItem;
 import com.jester.jestertricks.item.FateDeckItem;
@@ -18,6 +21,7 @@ import com.jester.jestertricks.item.RubberMalletItem;
 import com.jester.jestertricks.item.SharpCardsItem;
 import com.jester.jestertricks.item.SmokeBombItem;
 import com.jester.jestertricks.item.SquirtingFlowerItem;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.registries.DeferredRegister;
@@ -60,11 +64,28 @@ public final class ModItems {
     public static final RegistryObject<Item> LAUGH_MIRROR = ITEMS.register("laugh_mirror", () -> new LaughMirrorItem(tool()));
     public static final RegistryObject<Item> JESTER_BELLS = ITEMS.register("jester_bells", () -> new JesterBellsItem(tool()));
 
+    // --- Trucos de feria ---
+    public static final RegistryObject<Item> JUGGLING_PINS = ITEMS.register("juggling_pins", () -> new JugglingPinsItem(tool()));
+    public static final RegistryObject<Item> CLOWN_BALLOON = ITEMS.register("clown_balloon", () -> new ClownBalloonItem(tool()));
+    public static final RegistryObject<Item> CREAM_PIE = ITEMS.register("cream_pie", () -> new CreamPieItem(tool()));
+    public static final RegistryObject<Item> CIRCUS_CANNON = ITEMS.register("circus_cannon",
+            () -> new LoreBlockItem(ModBlocks.CIRCUS_CANNON.get(), new Item.Properties().rarity(Rarity.EPIC), 2));
+
+    // --- Decoración (cualquiera puede colocarla) ---
+    public static final RegistryObject<Item> HARLEQUIN_BLOCK = ITEMS.register("harlequin_block", () -> new BlockItem(ModBlocks.HARLEQUIN_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> HARLEQUIN_SLAB = ITEMS.register("harlequin_slab", () -> new BlockItem(ModBlocks.HARLEQUIN_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> HARLEQUIN_STAIRS = ITEMS.register("harlequin_stairs", () -> new BlockItem(ModBlocks.HARLEQUIN_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CIRCUS_TENT = ITEMS.register("circus_tent", () -> new BlockItem(ModBlocks.CIRCUS_TENT.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CIRCUS_TENT_SLAB = ITEMS.register("circus_tent_slab", () -> new BlockItem(ModBlocks.CIRCUS_TENT_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> FAIR_LANTERN = ITEMS.register("fair_lantern", () -> new BlockItem(ModBlocks.FAIR_LANTERN.get(), new Item.Properties()));
+    public static final RegistryObject<Item> FAIR_SIGN = ITEMS.register("fair_sign", () -> new BlockItem(ModBlocks.FAIR_SIGN.get(), new Item.Properties()));
+
     // --- Solo para dibujar los proyectiles (no salen en la pestaña) ---
     public static final RegistryObject<Item> THROWN_CARD = ITEMS.register("thrown_card", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> THROWN_KNIFE = ITEMS.register("thrown_knife", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BANG_FLAG = ITEMS.register("bang_flag", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SCARF_KNOT = ITEMS.register("scarf_knot", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> JUGGLING_PIN = ITEMS.register("juggling_pin", () -> new Item(new Item.Properties()));
 
     private ModItems() {}
 }

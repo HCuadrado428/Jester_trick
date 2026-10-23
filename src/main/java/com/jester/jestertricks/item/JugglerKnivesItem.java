@@ -1,5 +1,6 @@
 package com.jester.jestertricks.item;
 
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.entity.ThrownKnifeEntity;
 import com.jester.jestertricks.registry.ModSounds;
@@ -29,11 +30,11 @@ public class JugglerKnivesItem extends Item {
         ItemStack stack = player.getItemInHand(hand);
         if (!JesterLock.check(player)) return InteractionResultHolder.fail(stack);
         if (!level.isClientSide) {
-            ThrownKnifeEntity knife = new ThrownKnifeEntity(level, player, 18.0F);
+            ThrownKnifeEntity knife = new ThrownKnifeEntity(level, player, JesterConfig.damage(12.0F));
             knife.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 2.6F, 0.2F);
             level.addFreshEntity(knife);
             Fx.play(level, player.position(), ModSounds.CARD_THROW.get(), 0.8F, Fx.pitch(level, 0.75F, 0.2F));
-            player.getCooldowns().addCooldown(this, 6);
+            player.getCooldowns().addCooldown(this, JesterConfig.cooldown(10));
         }
         player.swing(hand);
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());

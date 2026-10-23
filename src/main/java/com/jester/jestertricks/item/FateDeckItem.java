@@ -1,5 +1,6 @@
 package com.jester.jestertricks.item;
 
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.registry.ModEffects;
 import com.jester.jestertricks.registry.ModSounds;
@@ -80,7 +81,7 @@ public class FateDeckItem extends Item {
             target.addEffect(new MobEffectInstance(card.effect().get(), card.ticks(), card.amp()), player);
         }
         announce(player, target, "bad", card.id());
-        player.getCooldowns().addCooldown(this, 60);
+        player.getCooldowns().addCooldown(this, JesterConfig.cooldown(60));
         return InteractionResult.SUCCESS;
     }
 
@@ -93,7 +94,7 @@ public class FateDeckItem extends Item {
             player.addEffect(new MobEffectInstance(card.effect().get(), card.ticks(), card.amp()));
             if (card.id().equals("health_boost")) player.heal(8.0F);
             announce(player, player, "good", card.id());
-            player.getCooldowns().addCooldown(this, 60);
+            player.getCooldowns().addCooldown(this, JesterConfig.cooldown(60));
         }
         player.swing(hand);
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());

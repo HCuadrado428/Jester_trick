@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "jestertricks:block/fair_lantern"
+    },
+    "hanging=true": {
+      "model": "jestertricks:block/fair_lantern_hanging"
+    }
+  }
+}
