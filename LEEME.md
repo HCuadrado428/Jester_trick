@@ -52,8 +52,11 @@ Se cambian en *Opciones > Controles > Jester's Tricks*.
 | G | **Carcajada**: los monstruos cercanos huyen y quedan debilitados. |
 | V | **Lluvia de confeti**: ciega y frena un momento a todo lo que te rodea. |
 | R | **Paso de sombra**: 3 segundos invisible, rápido y los golpes te atraviesan. |
+| J | Abre la pantalla de **pasivas**. |
 
 ### Pasivas del Jester
+
+Se encienden o apagan en su pantalla: tecla **J** o el botón **✦** que aparece a la derecha del inventario (solo lo ve el Jester). El ajuste se guarda aunque mueras o reinicies.
 
 - No recibe daño de caída (aterriza con confeti).
 - Visión nocturna permanente.

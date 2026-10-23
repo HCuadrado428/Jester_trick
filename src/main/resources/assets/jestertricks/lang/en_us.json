@@ -173,5 +173,14 @@
   "death.attack.jestertricks.squirt.item": "%1$s smelled %2$s's %3$s",
   "death.attack.jestertricks.mallet": "%1$s went BOING! for the last time",
   "death.attack.jestertricks.mallet.player": "%1$s went BOING! for the last time thanks to %2$s",
-  "death.attack.jestertricks.mallet.item": "%1$s went BOING! for the last time thanks to %2$s"
+  "death.attack.jestertricks.mallet.item": "%1$s went BOING! for the last time thanks to %2$s",
+  "key.jestertricks.passives": "Jester Passives",
+  "screen.jestertricks.passives": "Jester Passives",
+  "screen.jestertricks.passives.sub": "Turn your jester perks on or off",
+  "screen.jestertricks.passive.no_fall": "No fall damage",
+  "screen.jestertricks.passive.no_fall.desc": "You always land on your feet, with confetti.",
+  "screen.jestertricks.passive.night_vision": "Night vision",
+  "screen.jestertricks.passive.night_vision.desc": "See in the dark, like in your home world.",
+  "screen.jestertricks.passive.kill_laugh": "Victory laugh",
+  "screen.jestertricks.passive.kill_laugh.desc": "Laugh and burst into starry confetti when you defeat something."
 }

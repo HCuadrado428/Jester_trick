@@ -173,5 +173,14 @@
   "death.attack.jestertricks.squirt.item": "%1$s olió %3$s de %2$s",
   "death.attack.jestertricks.mallet": "%1$s hizo ¡BOING! por última vez",
   "death.attack.jestertricks.mallet.player": "%1$s hizo ¡BOING! por última vez gracias a %2$s",
-  "death.attack.jestertricks.mallet.item": "%1$s hizo ¡BOING! por última vez gracias a %2$s"
+  "death.attack.jestertricks.mallet.item": "%1$s hizo ¡BOING! por última vez gracias a %2$s",
+  "key.jestertricks.passives": "Pasivas del Jester",
+  "screen.jestertricks.passives": "Pasivas del Jester",
+  "screen.jestertricks.passives.sub": "Enciende o apaga tus ventajas de bufón",
+  "screen.jestertricks.passive.no_fall": "Sin daño de caída",
+  "screen.jestertricks.passive.no_fall.desc": "Aterrizas siempre de pie, con confeti.",
+  "screen.jestertricks.passive.night_vision": "Visión nocturna",
+  "screen.jestertricks.passive.night_vision.desc": "Ves en la oscuridad, como en tu mundo de origen.",
+  "screen.jestertricks.passive.kill_laugh": "Risa al vencer",
+  "screen.jestertricks.passive.kill_laugh.desc": "Te ríes y sueltas confeti con estrellas al acabar con algo."
 }

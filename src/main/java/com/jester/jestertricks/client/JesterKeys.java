@@ -20,6 +20,7 @@ public final class JesterKeys {
     public static final KeyMapping LAUGH = new KeyMapping("key.jestertricks.laugh", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_G, CATEGORY);
     public static final KeyMapping CONFETTI = new KeyMapping("key.jestertricks.confetti", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_V, CATEGORY);
     public static final KeyMapping SHADOW_STEP = new KeyMapping("key.jestertricks.shadow_step", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_R, CATEGORY);
+    public static final KeyMapping PASSIVES = new KeyMapping("key.jestertricks.passives", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_J, CATEGORY);
 
     @Mod.EventBusSubscriber(modid = JesterTricks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static final class Register {
@@ -28,6 +29,7 @@ public final class JesterKeys {
             event.register(LAUGH);
             event.register(CONFETTI);
             event.register(SHADOW_STEP);
+            event.register(PASSIVES);
         }
 
         private Register() {}
@@ -41,6 +43,10 @@ public final class JesterKeys {
             while (LAUGH.consumeClick()) send(JesterAbilities.Ability.LAUGH);
             while (CONFETTI.consumeClick()) send(JesterAbilities.Ability.CONFETTI);
             while (SHADOW_STEP.consumeClick()) send(JesterAbilities.Ability.SHADOW_STEP);
+            while (PASSIVES.consumeClick()) {
+                Minecraft mc = Minecraft.getInstance();
+                if (mc.screen == null) mc.setScreen(new PassivesScreen(null));
+            }
         }
 
         private static void send(JesterAbilities.Ability ability) {
