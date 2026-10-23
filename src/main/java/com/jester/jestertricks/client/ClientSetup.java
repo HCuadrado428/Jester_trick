@@ -5,6 +5,7 @@ import com.jester.jestertricks.registry.ModEntities;
 import com.jester.jestertricks.registry.ModParticles;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.RegisterDimensionSpecialEffectsEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -30,11 +31,17 @@ public final class ClientSetup {
         event.registerEntityRenderer(ModEntities.CLOWN_BALLOON.get(), ClownBalloonRenderer::new);
         event.registerEntityRenderer(ModEntities.RIFT.get(), RiftRenderer::new);
         event.registerEntityRenderer(ModEntities.JESTER_CLONE.get(), JesterCloneRenderer::new);
+        event.registerEntityRenderer(ModEntities.POCKET_STATUE.get(), PocketStatueRenderer::new);
     }
 
     @SubscribeEvent
     public static void registerParticles(RegisterParticleProvidersEvent event) {
         event.registerSpriteSet(ModParticles.ORIGIN_STAR.get(), OriginStarParticle.Provider::new);
+    }
+
+    @SubscribeEvent
+    public static void registerDimensionEffects(RegisterDimensionSpecialEffectsEvent event) {
+        event.register(JesterTricks.id("pocket"), new PocketSkyEffects());
     }
 
     private ClientSetup() {}

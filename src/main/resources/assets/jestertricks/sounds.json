@@ -82,5 +82,11 @@
     "sounds": [
       "jestertricks:balloon_pop"
     ]
+  },
+  "pocket_whisper": {
+    "subtitle": "subtitles.jestertricks.pocket_whisper",
+    "sounds": [
+      "jestertricks:pocket_whisper"
+    ]
   }
 }

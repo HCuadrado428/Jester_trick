@@ -6,6 +6,7 @@ import com.jester.jestertricks.entity.ClownBalloonEntity;
 import com.jester.jestertricks.entity.CreamPieEntity;
 import com.jester.jestertricks.entity.JugglingPinEntity;
 import com.jester.jestertricks.entity.JesterCloneEntity;
+import com.jester.jestertricks.entity.PocketStatueEntity;
 import com.jester.jestertricks.entity.RiftEntity;
 import com.jester.jestertricks.entity.ScarfHookEntity;
 import com.jester.jestertricks.entity.ThrownCardEntity;
@@ -56,6 +57,10 @@ public final class ModEntities {
     public static final RegistryObject<EntityType<ClownBalloonEntity>> CLOWN_BALLOON = ENTITIES.register("clown_balloon",
             () -> EntityType.Builder.<ClownBalloonEntity>of(ClownBalloonEntity::new, MobCategory.MISC)
                     .sized(0.6F, 0.8F).clientTrackingRange(8).updateInterval(1).build("clown_balloon"));
+
+    public static final RegistryObject<EntityType<PocketStatueEntity>> POCKET_STATUE = ENTITIES.register("pocket_statue",
+            () -> EntityType.Builder.<PocketStatueEntity>of(PocketStatueEntity::new, MobCategory.MISC)
+                    .sized(0.5F, 0.5F).clientTrackingRange(16).updateInterval(100).fireImmune().build("pocket_statue"));
 
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(JESTER_CLONE.get(), JesterCloneEntity.createAttributes().build());

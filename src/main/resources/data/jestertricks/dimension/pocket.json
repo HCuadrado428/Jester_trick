@@ -1,0 +1,22 @@
+{
+  "type": "jestertricks:pocket",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "jestertricks:pocket",
+      "lakes": false,
+      "features": false,
+      "layers": [
+        {
+          "block": "minecraft:barrier",
+          "height": 1
+        },
+        {
+          "block": "jestertricks:pocket_floor",
+          "height": 1
+        }
+      ],
+      "structure_overrides": []
+    }
+  }
+}

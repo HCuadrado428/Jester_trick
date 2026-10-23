@@ -1,5 +1,9 @@
 package com.jester.jestertricks.item;
 
+import net.minecraft.server.level.ServerPlayer;
+import com.jester.jestertricks.pocket.PocketManager;
+import com.jester.jestertricks.pocket.PocketDimension;
+import com.jester.jestertricks.JesterConfig;
 import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.registry.ModSounds;
 import net.minecraft.ChatFormatting;
@@ -55,10 +59,25 @@ public class BlackBoxItem extends Item {
     @Override
     public InteractionResult interactLivingEntity(ItemStack ignored, Player player, LivingEntity target, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
+        // dentro del bolsillo: el Jester saca a un jugador con un clic
+        if (PocketDimension.isPocket(player.level()) && target instanceof Player other) {
+            if (!JesterLock.check(player)) return InteractionResult.FAIL;
+            if (!player.level().isClientSide && other instanceof ServerPlayer sp) PocketManager.leave(sp);
+            return InteractionResult.SUCCESS;
+        }
         if (!player.isShiftKeyDown()) return InteractionResult.PASS;
         if (!JesterLock.check(player)) return InteractionResult.FAIL;
         if (player.level().isClientSide) return InteractionResult.SUCCESS;
-        if (hasMob(stack) || target instanceof Player || target.getType().is(Tags.EntityTypes.BOSSES)) {
+        // agachado sobre un jugador: a la dimensión de bolsillo
+        if (target instanceof ServerPlayer victim && player instanceof ServerPlayer jester) {
+            if (!PocketManager.sendIn(victim, jester, stack)) {
+                player.displayClientMessage(Component.translatable("message.jestertricks.box_cannot").withStyle(ChatFormatting.GRAY), true);
+                return InteractionResult.FAIL;
+            }
+            jester.getCooldowns().addCooldown(this, JesterConfig.cooldown(100));
+            return InteractionResult.SUCCESS;
+        }
+        if (hasMob(stack) || target.getType().is(Tags.EntityTypes.BOSSES)) {
             player.displayClientMessage(Component.translatable("message.jestertricks.box_cannot").withStyle(ChatFormatting.GRAY), true);
             return InteractionResult.FAIL;
         }
@@ -110,11 +129,10 @@ public class BlackBoxItem extends Item {
         if (!JesterLock.check(player)) return InteractionResultHolder.fail(stack);
         if (level.isClientSide) return InteractionResultHolder.success(stack);
 
-        if (player.isShiftKeyDown()) {
-            if (hasMob(stack)) {
-                Vec3 look = player.getLookAngle();
-                release(level, player, stack, player.position().add(look.x * 2.5, 0, look.z * 2.5));
-            }
+        if (player.isShiftKeyDown() && player instanceof ServerPlayer sp) {
+            // agachado al aire: el Jester entra en su bolsillo o sale de él
+            if (PocketDimension.isPocket(level)) PocketManager.leave(sp);
+            else PocketManager.jesterEnter(sp, stack);
             return InteractionResultHolder.success(stack);
         }
 
@@ -149,9 +167,20 @@ public class BlackBoxItem extends Item {
         return InteractionResultHolder.success(stack);
     }
 
+    /** Lo que se ve en gigante dentro del bolsillo: los objetos del bolsillo y la criatura tragada. */
+    public static CompoundTag snapshot(ItemStack stack) {
+        CompoundTag out = new CompoundTag();
+        if (stack.hasTag()) {
+            CompoundTag pocket = stack.getTag().getCompound(POCKET);
+            if (pocket.contains("Items")) out.put("Items", pocket.getList("Items", 10).copy());
+            if (stack.getTag().contains(MOB)) out.put("Mob", stack.getTag().getCompound(MOB).copy());
+        }
+        return out;
+    }
+
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
-        Lore.add(this, tooltip, 3);
+        Lore.add(this, tooltip, 5);
         if (hasMob(stack)) {
             tooltip.add(Component.translatable("message.jestertricks.box_holds", stack.getTag().getString(MOB_NAME))
                     .withStyle(ChatFormatting.DARK_PURPLE));

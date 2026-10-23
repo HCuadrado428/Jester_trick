@@ -25,12 +25,22 @@ Armas y trucos del Jester, el bufón arlequín. Todo sale **solo de la pestaña 
 |---|---|
 | Estrella del Origen | Abre una grieta y te lleva a otra dimensión (posición equivalente, siempre en un sitio seguro). Agachado: eliges destino (mundo normal, Nether o End). |
 | Aro de Feria | Agachado + clic en el suelo: aro **fijo** para siempre (si pones otro fijo, el anterior desaparece). Clic normal: aro temporal. Al saltar por un temporal, este desaparece y apareces en el fijo, aunque esté en otra dimensión. Los temporales sin usar se desvanecen a los 2 minutos. |
-| Caja Negra | Clic: bolsillo de 27 huecos que viaja con la caja. Agachado sobre una criatura: se la traga (ni jugadores ni jefes). Agachado en el suelo o al aire: la suelta. |
+| Caja Negra | Clic: bolsillo de 27 huecos que viaja con la caja. Agachado sobre una criatura: se la traga (ni jefes). Agachado en el suelo: la suelta. **Agachado sobre un jugador: lo mete 1 minuto en la dimensión de bolsillo.** Agachado al aire: el Jester entra o sale de su bolsillo. |
 | Baraja del Destino | Sobre otro jugador o criatura: carta mala al azar (Pranked!, levitar, brillar, lentitud, mareo, ceguera, ¡a bailar!, teletransporte...). Al aire: carta buena para ti (fuerza, velocidad, regeneración, resistencia...). |
 | Espejo de la Risa | Salen tres copias del Jester con su skin. Los monstruos van a por ellas y estallan en confeti al golpearlas. |
 | Cascabeles | Todo lo que hay a 10 bloques se pone a bailar, y los invisibles dejan de serlo y brillan. |
 
 La Varita ahora abre mini portales en cada extremo del salto.
+
+### La dimensión de bolsillo
+
+Dentro de la Caja Negra hay un mundo: un suelo infinito de rombos arlequín bajo un cielo negro, donde el horizonte se pierde en la niebla.
+
+- Quien es tragado ve, **en gigante**, todo lo que el Jester guarda en la Caja: los objetos del bolsillo como estatuas enormes en círculo, y la criatura tragada al fondo. Nadie puede tocarlos, solo mirarlos mientras camina.
+- Dentro **no se puede romper, poner, usar objetos ni pegar**, y nadie recibe daño.
+- Se oyen risas lejanas y susurros, y flotan estrellas del origen.
+- Sale solo al **minuto** (lleva una cuenta atrás), y vuelve justo a donde estaba.
+- El Jester puede **entrar** (agachado + clic al aire con la Caja) y allí los demás lo ven **gigante**. Con un clic a un jugador lo **saca** antes de tiempo. Para salir, otra vez agachado + clic al aire.
 
 ### Trucos de feria
 

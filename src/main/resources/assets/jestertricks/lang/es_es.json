@@ -69,8 +69,8 @@
   "tooltip.jestertricks.fair_hoop.1": "Clic en el suelo: coloca un aro temporal.",
   "tooltip.jestertricks.fair_hoop.2": "Salta por el temporal y aparecerás en el fijo.",
   "tooltip.jestertricks.black_box.0": "Clic derecho: abre el bolsillo de objetos.",
-  "tooltip.jestertricks.black_box.1": "Agachado sobre una criatura: se la traga.",
-  "tooltip.jestertricks.black_box.2": "Agachado en el suelo: la suelta.",
+  "tooltip.jestertricks.black_box.1": "Agachado sobre una criatura: se la traga. Agachado en el suelo: la suelta.",
+  "tooltip.jestertricks.black_box.2": "Agachado sobre un jugador: lo mete 1 minuto en la dimensión de bolsillo.",
   "tooltip.jestertricks.fate_deck.0": "Sobre otro jugador o criatura: carta mala.",
   "tooltip.jestertricks.fate_deck.1": "Al aire: una carta buena para ti.",
   "tooltip.jestertricks.laugh_mirror.0": "Tres copias tuyas salen del espejo.",
@@ -189,5 +189,14 @@
   "commands.jestertricks.list": "Jesters: %s",
   "commands.jestertricks.list_empty": "No hay ningún Jester: cualquiera puede usar los objetos.",
   "commands.jestertricks.cleared": "Lista de Jesters vaciada: ahora cualquiera puede usar los objetos.",
-  "commands.jestertricks.you_are_jester": "Sientes una risa lejana... Ahora eres el Jester."
+  "commands.jestertricks.you_are_jester": "Sientes una risa lejana... Ahora eres el Jester.",
+  "block.jestertricks.pocket_floor": "Suelo del Bolsillo",
+  "entity.jestertricks.pocket_statue": "Estatua del Bolsillo",
+  "subtitles.jestertricks.pocket_whisper": "Susurros en la oscuridad",
+  "message.jestertricks.pocket_swallowed": "La Caja Negra te ha tragado... Todo lo que guarda el Jester te observa.",
+  "message.jestertricks.pocket_sent": "%s está dentro de la Caja Negra (%s s)",
+  "message.jestertricks.pocket_released": "La caja se abre y vuelves a la luz.",
+  "message.jestertricks.pocket_timer": "Dentro de la Caja Negra... %s s",
+  "tooltip.jestertricks.black_box.3": "Agachado al aire: entras o sales de tu bolsillo.",
+  "tooltip.jestertricks.black_box.4": "Dentro, clic a un jugador: lo sacas."
 }

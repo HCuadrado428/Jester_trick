@@ -72,5 +72,13 @@ public final class ModBlocks {
             () -> new FairSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(1.0F)
                     .sound(SoundType.WOOD).noOcclusion().lightLevel(s -> 7)));
 
+    /** Suelo infinito de rombos de la dimensión de bolsillo. Indestructible y sin objeto. */
+    public static final RegistryObject<Block> POCKET_FLOOR = BLOCKS.register("pocket_floor",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(-1.0F, 3600000.0F)
+                    .noLootTable()
+                    .sound(SoundType.STONE)));
+
     private ModBlocks() {}
 }

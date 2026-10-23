@@ -69,8 +69,8 @@
   "tooltip.jestertricks.fair_hoop.1": "Click the ground: place a temporary hoop.",
   "tooltip.jestertricks.fair_hoop.2": "Jump through a temporary one to arrive at the fixed one.",
   "tooltip.jestertricks.black_box.0": "Right-click: open the pocket.",
-  "tooltip.jestertricks.black_box.1": "Sneak on a creature: swallow it.",
-  "tooltip.jestertricks.black_box.2": "Sneak on the ground: release it.",
+  "tooltip.jestertricks.black_box.1": "Sneak on a creature: swallow it. Sneak on the ground: release it.",
+  "tooltip.jestertricks.black_box.2": "Sneak on a player: send them to the pocket dimension for 1 minute.",
   "tooltip.jestertricks.fate_deck.0": "On another player or creature: a bad card.",
   "tooltip.jestertricks.fate_deck.1": "In the air: a good card for you.",
   "tooltip.jestertricks.laugh_mirror.0": "Three copies of you step out of the mirror.",
@@ -189,5 +189,14 @@
   "commands.jestertricks.list": "Jesters: %s",
   "commands.jestertricks.list_empty": "There is no Jester: anyone can use the items.",
   "commands.jestertricks.cleared": "Jester list cleared: anyone can use the items now.",
-  "commands.jestertricks.you_are_jester": "You hear distant laughter... You are now the Jester."
+  "commands.jestertricks.you_are_jester": "You hear distant laughter... You are now the Jester.",
+  "block.jestertricks.pocket_floor": "Pocket Floor",
+  "entity.jestertricks.pocket_statue": "Pocket Statue",
+  "subtitles.jestertricks.pocket_whisper": "Whispers in the dark",
+  "message.jestertricks.pocket_swallowed": "The Black Box swallowed you... Everything the Jester keeps is watching.",
+  "message.jestertricks.pocket_sent": "%s is inside the Black Box (%s s)",
+  "message.jestertricks.pocket_released": "The box opens and you return to the light.",
+  "message.jestertricks.pocket_timer": "Inside the Black Box... %s s",
+  "tooltip.jestertricks.black_box.3": "Sneak in the air: enter or leave your pocket.",
+  "tooltip.jestertricks.black_box.4": "Inside, click a player: let them out."
 }
