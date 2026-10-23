@@ -198,5 +198,13 @@
   "message.jestertricks.pocket_released": "The box opens and you return to the light.",
   "message.jestertricks.pocket_timer": "Inside the Black Box... %s s",
   "tooltip.jestertricks.black_box.3": "Sneak in the air: enter or leave your pocket.",
-  "tooltip.jestertricks.black_box.4": "Inside, click a player: let them out."
+  "tooltip.jestertricks.black_box.4": "Inside, click a player: let them out.",
+  "key.jestertricks.true_form": "True Form",
+  "ability.jestertricks.true_form": "True Form",
+  "effect.jestertricks.true_form": "True Form",
+  "item.jestertricks.doll_box": "Doll Box",
+  "entity.jestertricks.harlequin_doll": "Harlequin Doll",
+  "tooltip.jestertricks.doll_box.0": "Right-click: 3 harlequin dolls pop out to follow you and fight for you.",
+  "tooltip.jestertricks.doll_box.1": "Sneak + right-click: they go back in the box.",
+  "message.jestertricks.dolls_back": "The dolls go back in the box."
 }

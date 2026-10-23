@@ -20,6 +20,7 @@ public final class JesterKeys {
     public static final KeyMapping LAUGH = new KeyMapping("key.jestertricks.laugh", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_G, CATEGORY);
     public static final KeyMapping CONFETTI = new KeyMapping("key.jestertricks.confetti", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_V, CATEGORY);
     public static final KeyMapping SHADOW_STEP = new KeyMapping("key.jestertricks.shadow_step", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_R, CATEGORY);
+    public static final KeyMapping TRUE_FORM = new KeyMapping("key.jestertricks.true_form", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_H, CATEGORY);
     public static final KeyMapping PASSIVES = new KeyMapping("key.jestertricks.passives", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_J, CATEGORY);
 
     @Mod.EventBusSubscriber(modid = JesterTricks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -30,6 +31,7 @@ public final class JesterKeys {
             event.register(CONFETTI);
             event.register(SHADOW_STEP);
             event.register(PASSIVES);
+            event.register(TRUE_FORM);
         }
 
         private Register() {}
@@ -43,6 +45,7 @@ public final class JesterKeys {
             while (LAUGH.consumeClick()) send(JesterAbilities.Ability.LAUGH);
             while (CONFETTI.consumeClick()) send(JesterAbilities.Ability.CONFETTI);
             while (SHADOW_STEP.consumeClick()) send(JesterAbilities.Ability.SHADOW_STEP);
+            while (TRUE_FORM.consumeClick()) send(JesterAbilities.Ability.TRUE_FORM);
             while (PASSIVES.consumeClick()) {
                 Minecraft mc = Minecraft.getInstance();
                 if (mc.screen == null) mc.setScreen(new PassivesScreen(null));

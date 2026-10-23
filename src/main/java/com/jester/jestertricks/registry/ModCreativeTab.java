@@ -36,6 +36,7 @@ public final class ModCreativeTab {
                         output.accept(ModItems.FATE_DECK.get());
                         output.accept(ModItems.LAUGH_MIRROR.get());
                         output.accept(ModItems.JESTER_BELLS.get());
+                        output.accept(ModItems.DOLL_BOX.get());
                         output.accept(ModItems.JUGGLING_PINS.get());
                         output.accept(ModItems.CLOWN_BALLOON.get());
                         output.accept(ModItems.CREAM_PIE.get());

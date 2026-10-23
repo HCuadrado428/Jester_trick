@@ -91,5 +91,13 @@ public final class JesterPassives {
         if (event.getEntity() instanceof ServerPlayer sp) PassivesSyncPacket.sendTo(sp);
     }
 
+    /** Quien empieza a ver al Jester a mitad de su forma real también la ve. */
+    @SubscribeEvent
+    public static void onStartTracking(PlayerEvent.StartTracking event) {
+        if (event.getTarget() instanceof ServerPlayer jester && event.getEntity() instanceof ServerPlayer viewer) {
+            com.jester.jestertricks.network.TrueFormPacket.sendTo(viewer, jester);
+        }
+    }
+
     private JesterPassives() {}
 }

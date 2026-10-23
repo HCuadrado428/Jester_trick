@@ -29,6 +29,7 @@ Armas y trucos del Jester, el bufón arlequín. Todo sale **solo de la pestaña 
 | Baraja del Destino | Sobre otro jugador o criatura: carta mala al azar (Pranked!, levitar, brillar, lentitud, mareo, ceguera, ¡a bailar!, teletransporte...). Al aire: carta buena para ti (fuerza, velocidad, regeneración, resistencia...). |
 | Espejo de la Risa | Salen tres copias del Jester con su skin. Los monstruos van a por ellas y estallan en confeti al golpearlas. |
 | Cascabeles | Todo lo que hay a 10 bloques se pone a bailar, y los invisibles dejan de serlo y brillan. |
+| Caja de Muñecos | Salen 3 muñecos arlequín (Jesters en miniatura) que le siguen a saltitos, atacan a quien le ataca o a quien él ataca, y estallan en confeti al caer. Agachado: vuelven a la caja. |
 
 La Varita ahora abre mini portales en cada extremo del salto.
 
@@ -41,6 +42,7 @@ Dentro de la Caja Negra hay un mundo: un suelo infinito de rombos arlequín bajo
 - Se oyen risas lejanas y susurros, y flotan estrellas del origen.
 - Sale solo al **minuto** (lleva una cuenta atrás), y vuelve justo a donde estaba.
 - El Jester puede **entrar** (agachado + clic al aire con la Caja) y allí los demás lo ven **gigante**. Con un clic a un jugador lo **saca** antes de tiempo. Para salir, otra vez agachado + clic al aire.
+- El Jester puede **construir** dentro con cualquier bloque: su casa se queda guardada para siempre. El suelo de rombos no se rompe y los atrapados siguen sin poder tocar nada.
 
 ### Trucos de feria
 
@@ -62,6 +64,7 @@ Se cambian en *Opciones > Controles > Jester's Tricks*.
 | G | **Carcajada**: los monstruos cercanos huyen y quedan debilitados. |
 | V | **Lluvia de confeti**: ciega y frena un momento a todo lo que te rodea. |
 | R | **Paso de sombra**: 3 segundos invisible, rápido y los golpes te atraviesan. |
+| H | **Forma real**: 10 segundos como lo que realmente es, una sombra alta y delgada con la máscara blanca. Los monstruos huyen y a los jugadores cercanos se les nubla la vista. |
 | J | Abre la pantalla de **pasivas**. |
 
 ### Pasivas del Jester

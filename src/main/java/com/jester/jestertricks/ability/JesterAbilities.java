@@ -28,7 +28,9 @@ public final class JesterAbilities {
         /** Lluvia de confeti: ciega un momento a todos los que te rodean. */
         CONFETTI(400),
         /** Paso de sombra: invisible, rápido y los golpes te atraviesan durante 3 segundos. */
-        SHADOW_STEP(500);
+        SHADOW_STEP(500),
+        /** Forma real: 10 segundos como sombra alta con máscara; los monstruos huyen. */
+        TRUE_FORM(1200);
 
         public final int cooldown;
 
@@ -56,6 +58,7 @@ public final class JesterAbilities {
             case LAUGH -> laugh(player);
             case CONFETTI -> confetti(player);
             case SHADOW_STEP -> shadowStep(player);
+            case TRUE_FORM -> trueForm(player);
         };
         if (done) {
             player.getPersistentData().putLong(ability.key(), now + JesterConfig.cooldown(ability.cooldown));
@@ -118,6 +121,18 @@ public final class JesterAbilities {
         level.sendParticles(ParticleTypes.LARGE_SMOKE, c.x, c.y + 1, c.z, 40, 0.4, 0.8, 0.4, 0.02);
         level.sendParticles(ParticleTypes.SQUID_INK, c.x, c.y + 1, c.z, 20, 0.4, 0.8, 0.4, 0.05);
         level.playSound(null, c.x, c.y, c.z, ModSounds.RIFT.get(), SoundSource.PLAYERS, 0.8F, 1.6F);
+        return true;
+    }
+
+    private static boolean trueForm(ServerPlayer player) {
+        player.addEffect(new MobEffectInstance(ModEffects.TRUE_FORM.get(), 200, 0, false, false, true));
+        com.jester.jestertricks.network.TrueFormPacket.broadcast(player);
+        ServerLevel level = player.serverLevel();
+        Vec3 c = player.position();
+        level.sendParticles(ParticleTypes.SQUID_INK, c.x, c.y + 1.5, c.z, 60, 0.6, 1.5, 0.6, 0.08);
+        level.sendParticles(ModParticles.ORIGIN_STAR.get(), c.x, c.y + 3.0, c.z, 12, 0.8, 0.6, 0.8, 0.03);
+        level.playSound(null, c.x, c.y, c.z, ModSounds.RIFT.get(), SoundSource.PLAYERS, 1.5F, 0.5F);
+        level.playSound(null, c.x, c.y, c.z, ModSounds.JESTER_LAUGH.get(), SoundSource.PLAYERS, 2.5F, 0.45F);
         return true;
     }
 

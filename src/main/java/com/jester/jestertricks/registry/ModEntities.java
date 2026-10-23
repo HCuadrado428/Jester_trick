@@ -5,6 +5,7 @@ import com.jester.jestertricks.entity.BangFlagEntity;
 import com.jester.jestertricks.entity.ClownBalloonEntity;
 import com.jester.jestertricks.entity.CreamPieEntity;
 import com.jester.jestertricks.entity.JugglingPinEntity;
+import com.jester.jestertricks.entity.HarlequinDollEntity;
 import com.jester.jestertricks.entity.JesterCloneEntity;
 import com.jester.jestertricks.entity.PocketStatueEntity;
 import com.jester.jestertricks.entity.RiftEntity;
@@ -62,8 +63,13 @@ public final class ModEntities {
             () -> EntityType.Builder.<PocketStatueEntity>of(PocketStatueEntity::new, MobCategory.MISC)
                     .sized(0.5F, 0.5F).clientTrackingRange(16).updateInterval(100).fireImmune().build("pocket_statue"));
 
+    public static final RegistryObject<EntityType<HarlequinDollEntity>> HARLEQUIN_DOLL = ENTITIES.register("harlequin_doll",
+            () -> EntityType.Builder.<HarlequinDollEntity>of(HarlequinDollEntity::new, MobCategory.MISC)
+                    .sized(0.4F, 0.95F).clientTrackingRange(8).build("harlequin_doll"));
+
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(JESTER_CLONE.get(), JesterCloneEntity.createAttributes().build());
+        event.put(HARLEQUIN_DOLL.get(), HarlequinDollEntity.createAttributes().build());
     }
 
     private ModEntities() {}

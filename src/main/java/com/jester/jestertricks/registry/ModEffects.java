@@ -2,6 +2,7 @@ package com.jester.jestertricks.registry;
 
 import com.jester.jestertricks.JesterTricks;
 import com.jester.jestertricks.effect.DancingEffect;
+import com.jester.jestertricks.effect.TrueFormEffect;
 import com.jester.jestertricks.effect.PrankedEffect;
 import com.jester.jestertricks.effect.ShadowStepEffect;
 import net.minecraft.world.effect.MobEffect;
@@ -20,6 +21,9 @@ public final class ModEffects {
     public static final RegistryObject<MobEffect> DANCING = EFFECTS.register("dancing", DancingEffect::new);
 
     /** Paso de sombra: los golpes atraviesan al Jester durante un momento. */
+    /** Forma real del Jester (tecla H). */
+    public static final RegistryObject<MobEffect> TRUE_FORM = EFFECTS.register("true_form", TrueFormEffect::new);
+
     public static final RegistryObject<MobEffect> SHADOW_STEP = EFFECTS.register("shadow_step", ShadowStepEffect::new);
 
     private ModEffects() {}

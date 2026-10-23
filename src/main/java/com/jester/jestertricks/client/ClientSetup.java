@@ -29,9 +29,13 @@ public final class ClientSetup {
         event.registerEntityRenderer(ModEntities.CREAM_PIE.get(),
                 ctx -> new OrientedItemRenderer<>(ctx, 0.9F, 0.0F, OrientedItemRenderer.Spin.NONE));
         event.registerEntityRenderer(ModEntities.CLOWN_BALLOON.get(), ClownBalloonRenderer::new);
-        event.registerEntityRenderer(ModEntities.RIFT.get(), RiftRenderer::new);
+        event.registerEntityRenderer(ModEntities.RIFT.get(), ctx -> {
+            ClientTrueForm.init(ctx);          // aprovecha el contexto para crear el aspecto de la forma real
+            return new RiftRenderer(ctx);
+        });
         event.registerEntityRenderer(ModEntities.JESTER_CLONE.get(), JesterCloneRenderer::new);
         event.registerEntityRenderer(ModEntities.POCKET_STATUE.get(), PocketStatueRenderer::new);
+        event.registerEntityRenderer(ModEntities.HARLEQUIN_DOLL.get(), HarlequinDollRenderer::new);
     }
 
     @SubscribeEvent

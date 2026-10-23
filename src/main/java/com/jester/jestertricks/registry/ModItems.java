@@ -6,6 +6,7 @@ import com.jester.jestertricks.item.ClownBalloonItem;
 import com.jester.jestertricks.item.CreamPieItem;
 import com.jester.jestertricks.item.JugglingPinsItem;
 import com.jester.jestertricks.item.BlackBoxItem;
+import com.jester.jestertricks.item.DollBoxItem;
 import com.jester.jestertricks.item.FairHoopItem;
 import com.jester.jestertricks.item.FateDeckItem;
 import com.jester.jestertricks.item.JesterBellsItem;
@@ -62,6 +63,7 @@ public final class ModItems {
     public static final RegistryObject<Item> BLACK_BOX = ITEMS.register("black_box", () -> new BlackBoxItem(tool()));
     public static final RegistryObject<Item> FATE_DECK = ITEMS.register("fate_deck", () -> new FateDeckItem(tool()));
     public static final RegistryObject<Item> LAUGH_MIRROR = ITEMS.register("laugh_mirror", () -> new LaughMirrorItem(tool()));
+    public static final RegistryObject<Item> DOLL_BOX = ITEMS.register("doll_box", () -> new DollBoxItem(tool()));
     public static final RegistryObject<Item> JESTER_BELLS = ITEMS.register("jester_bells", () -> new JesterBellsItem(tool()));
 
     // --- Trucos de feria ---
