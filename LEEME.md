@@ -64,7 +64,7 @@ Se cambian en *Opciones > Controles > Jester's Tricks*.
 | G | **Carcajada**: los monstruos cercanos huyen y quedan debilitados. |
 | V | **Lluvia de confeti**: ciega y frena un momento a todo lo que te rodea. |
 | R | **Paso de sombra**: 3 segundos invisible, rápido y los golpes te atraviesan. |
-| H | **Forma real**: 10 segundos como lo que realmente es, una sombra alta y delgada con la máscara blanca. Los monstruos huyen y a los jugadores cercanos se les nubla la vista. |
+| H | **Forma real**: 10 segundos como lo que realmente es, con su propia skin pero alto y delgado como una sombra. Los monstruos huyen y a los jugadores cercanos se les nubla la vista. |
 | J | Abre la pantalla de **pasivas**. |
 
 ### Pasivas del Jester
