@@ -55,21 +55,20 @@ Dentro de la Caja Negra hay un mundo: un suelo infinito de rombos arlequín bajo
 
 **Decoración** (cualquiera puede colocarla): Bloque, Losa y Escaleras Arlequín, Lona de Carpa y su losa, Farolillo de Feria y Cartel de Feria.
 
-### Poderes con tecla (sin llevar nada en la mano)
+### Poderes (objetos)
 
-Se cambian en *Opciones > Controles > Jester's Tricks*.
+Cada poder es un objeto: clic derecho para usarlo. Tienen recarga.
 
-| Tecla | Poder |
+| Objeto | Poder |
 |---|---|
-| G | **Carcajada**: los monstruos cercanos huyen y quedan debilitados. |
-| V | **Lluvia de confeti**: ciega y frena un momento a todo lo que te rodea. |
-| R | **Paso de sombra**: 3 segundos invisible, rápido y los golpes te atraviesan. |
-| H | **Forma real**: 10 segundos como lo que realmente es, con su propia skin pero alto y delgado como una sombra. Los monstruos huyen y a los jugadores cercanos se les nubla la vista. |
-| J | Abre la pantalla de **pasivas**. |
+| Máscara de la Carcajada | **Carcajada**: los monstruos cercanos huyen y quedan debilitados. (30 s) |
+| Bolsa de Confeti | **Lluvia de confeti**: ciega y frena un momento a todo lo que te rodea. (20 s) |
+| Capa de Sombra | **Paso de sombra**: 3 segundos invisible, rápido y los golpes te atraviesan. (25 s) |
+| Máscara Rota | **Forma real**: 10 segundos con su propia skin pero alto y delgado como una sombra. Los monstruos huyen y a los jugadores cercanos se les nubla la vista. (60 s) |
 
 ### Pasivas del Jester
 
-Se encienden o apagan en su pantalla: tecla **J** o el botón **✦** que aparece a la derecha del inventario (solo lo ve el Jester). El ajuste se guarda aunque mueras o reinicies.
+Se encienden o apagan en su pantalla: el botón **✦** que aparece a la derecha del inventario (solo lo ve el Jester). El ajuste se guarda aunque mueras o reinicies.
 
 - No recibe daño de caída (aterriza con confeti).
 - Visión nocturna permanente.

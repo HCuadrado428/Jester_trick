@@ -7,6 +7,7 @@ import com.jester.jestertricks.item.CreamPieItem;
 import com.jester.jestertricks.item.JugglingPinsItem;
 import com.jester.jestertricks.item.BlackBoxItem;
 import com.jester.jestertricks.item.DollBoxItem;
+import com.jester.jestertricks.item.AbilityItem;
 import com.jester.jestertricks.item.FairHoopItem;
 import com.jester.jestertricks.item.FateDeckItem;
 import com.jester.jestertricks.item.JesterBellsItem;
@@ -28,6 +29,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import com.jester.jestertricks.ability.JesterAbilities;
 
 public final class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -64,6 +66,11 @@ public final class ModItems {
     public static final RegistryObject<Item> FATE_DECK = ITEMS.register("fate_deck", () -> new FateDeckItem(tool()));
     public static final RegistryObject<Item> LAUGH_MIRROR = ITEMS.register("laugh_mirror", () -> new LaughMirrorItem(tool()));
     public static final RegistryObject<Item> DOLL_BOX = ITEMS.register("doll_box", () -> new DollBoxItem(tool()));
+    // --- Poderes (antes eran teclas) ---
+    public static final RegistryObject<Item> LAUGH_MASK = ITEMS.register("laugh_mask", () -> new AbilityItem(JesterAbilities.Ability.LAUGH, tool()));
+    public static final RegistryObject<Item> CONFETTI_BAG = ITEMS.register("confetti_bag", () -> new AbilityItem(JesterAbilities.Ability.CONFETTI, tool()));
+    public static final RegistryObject<Item> SHADOW_CLOAK = ITEMS.register("shadow_cloak", () -> new AbilityItem(JesterAbilities.Ability.SHADOW_STEP, tool()));
+    public static final RegistryObject<Item> CRACKED_MASK = ITEMS.register("cracked_mask", () -> new AbilityItem(JesterAbilities.Ability.TRUE_FORM, tool()));
     public static final RegistryObject<Item> JESTER_BELLS = ITEMS.register("jester_bells", () -> new JesterBellsItem(tool()));
 
     // --- Trucos de feria ---

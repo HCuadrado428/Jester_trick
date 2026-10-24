@@ -1,14 +1,10 @@
 package com.jester.jestertricks.ability;
 
-import com.jester.jestertricks.JesterConfig;
-import com.jester.jestertricks.JesterLock;
 import com.jester.jestertricks.item.Fx;
 import com.jester.jestertricks.registry.ModEffects;
 import com.jester.jestertricks.registry.ModParticles;
 import com.jester.jestertricks.registry.ModSounds;
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
@@ -20,7 +16,7 @@ import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
 
-/** Poderes del Jester que se lanzan con una tecla, sin llevar ningún objeto. */
+/** Poderes del Jester; cada uno se lanza con su objeto (ver AbilityItem). */
 public final class JesterAbilities {
     public enum Ability {
         /** Carcajada: los monstruos cercanos huyen despavoridos. */
@@ -37,32 +33,16 @@ public final class JesterAbilities {
         Ability(int cooldown) {
             this.cooldown = cooldown;
         }
-
-        String key() {
-            return "jestertricks_cd_" + name().toLowerCase();
-        }
     }
 
-    public static void use(ServerPlayer player, Ability ability) {
-        if (!JesterLock.check(player)) return;
-        long now = player.level().getGameTime();
-        long ready = player.getPersistentData().getLong(ability.key());
-        if (now < ready) {
-            long secs = (ready - now + 19) / 20;
-            player.displayClientMessage(Component.translatable("message.jestertricks.ability_cooldown",
-                    Component.translatable("ability.jestertricks." + ability.name().toLowerCase()), secs)
-                    .withStyle(ChatFormatting.GRAY), true);
-            return;
-        }
-        boolean done = switch (ability) {
+    /** Lanza el poder. Devuelve true si se ha usado (para poner el objeto en recarga). */
+    public static boolean run(ServerPlayer player, Ability ability) {
+        return switch (ability) {
             case LAUGH -> laugh(player);
             case CONFETTI -> confetti(player);
             case SHADOW_STEP -> shadowStep(player);
             case TRUE_FORM -> trueForm(player);
         };
-        if (done) {
-            player.getPersistentData().putLong(ability.key(), now + JesterConfig.cooldown(ability.cooldown));
-        }
     }
 
     private static boolean laugh(ServerPlayer player) {
