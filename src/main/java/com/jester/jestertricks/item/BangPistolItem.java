@@ -45,10 +45,13 @@ public class BangPistolItem extends Item {
 
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+        // La postura se crea ya, al cargar el objeto: si se crea después de que Minecraft dibuje
+        // el primer jugador, el juego no la conoce y se cuelga.
+        final net.minecraft.client.model.HumanoidModel.ArmPose aim = com.jester.jestertricks.client.PistolArmPose.AIM;
         consumer.accept(new IClientItemExtensions() {
             @Override
             public net.minecraft.client.model.HumanoidModel.ArmPose getArmPose(LivingEntity entity, InteractionHand hand, ItemStack stack) {
-                return com.jester.jestertricks.client.PistolArmPose.AIM;
+                return aim;
             }
         });
     }
