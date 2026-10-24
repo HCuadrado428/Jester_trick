@@ -70,7 +70,6 @@ public final class ModItems {
     public static final RegistryObject<Item> LAUGH_MASK = ITEMS.register("laugh_mask", () -> new AbilityItem(JesterAbilities.Ability.LAUGH, tool()));
     public static final RegistryObject<Item> CONFETTI_BAG = ITEMS.register("confetti_bag", () -> new AbilityItem(JesterAbilities.Ability.CONFETTI, tool()));
     public static final RegistryObject<Item> SHADOW_CLOAK = ITEMS.register("shadow_cloak", () -> new AbilityItem(JesterAbilities.Ability.SHADOW_STEP, tool()));
-    public static final RegistryObject<Item> CRACKED_MASK = ITEMS.register("cracked_mask", () -> new AbilityItem(JesterAbilities.Ability.TRUE_FORM, tool()));
     public static final RegistryObject<Item> JESTER_BELLS = ITEMS.register("jester_bells", () -> new JesterBellsItem(tool()));
 
     // --- Trucos de feria ---

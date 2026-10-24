@@ -193,8 +193,6 @@
   "message.jestertricks.pocket_timer": "Inside the Black Box... %s s",
   "tooltip.jestertricks.black_box.3": "Sneak in the air: enter or leave your pocket.",
   "tooltip.jestertricks.black_box.4": "Inside, click a player: let them out.",
-  "ability.jestertricks.true_form": "True Form",
-  "effect.jestertricks.true_form": "True Form",
   "item.jestertricks.doll_box": "Doll Box",
   "entity.jestertricks.harlequin_doll": "Harlequin Doll",
   "tooltip.jestertricks.doll_box.0": "Right-click: 3 harlequin dolls pop out to follow you and fight for you.",
@@ -208,8 +206,5 @@
   "tooltip.jestertricks.confetti_bag.1": "It never empties. Nobody knows what's at the bottom.",
   "item.jestertricks.shadow_cloak": "Shadow Cloak",
   "tooltip.jestertricks.shadow_cloak.0": "Right click: 3 s invisible and fast; hits pass through you.",
-  "tooltip.jestertricks.shadow_cloak.1": "Smells like another world.",
-  "item.jestertricks.cracked_mask": "Cracked Mask",
-  "tooltip.jestertricks.cracked_mask.0": "Right click: 10 s in your true form. Monsters flee, sight darkens.",
-  "tooltip.jestertricks.cracked_mask.1": "Through the crack you can see what lies beneath."
+  "tooltip.jestertricks.shadow_cloak.1": "Smells like another world."
 }

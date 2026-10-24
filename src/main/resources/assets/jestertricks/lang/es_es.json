@@ -193,8 +193,6 @@
   "message.jestertricks.pocket_timer": "Dentro de la Caja Negra... %s s",
   "tooltip.jestertricks.black_box.3": "Agachado al aire: entras o sales de tu bolsillo.",
   "tooltip.jestertricks.black_box.4": "Dentro, clic a un jugador: lo sacas.",
-  "ability.jestertricks.true_form": "Forma real",
-  "effect.jestertricks.true_form": "Forma Real",
   "item.jestertricks.doll_box": "Caja de Muñecos",
   "entity.jestertricks.harlequin_doll": "Muñeco Arlequín",
   "tooltip.jestertricks.doll_box.0": "Clic derecho: salen 3 muñecos arlequín que te siguen y pelean por ti.",
@@ -208,8 +206,5 @@
   "tooltip.jestertricks.confetti_bag.1": "Nunca se vacía. Nadie sabe qué hay al fondo.",
   "item.jestertricks.shadow_cloak": "Capa de Sombra",
   "tooltip.jestertricks.shadow_cloak.0": "Clic derecho: 3 s invisible y veloz; los golpes te atraviesan.",
-  "tooltip.jestertricks.shadow_cloak.1": "Huele a otro mundo.",
-  "item.jestertricks.cracked_mask": "Máscara Rota",
-  "tooltip.jestertricks.cracked_mask.0": "Clic derecho: 10 s en tu forma real. Los monstruos huyen, la vista se nubla.",
-  "tooltip.jestertricks.cracked_mask.1": "Por la grieta se ve lo que hay debajo."
+  "tooltip.jestertricks.shadow_cloak.1": "Huele a otro mundo."
 }

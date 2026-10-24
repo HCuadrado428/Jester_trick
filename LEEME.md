@@ -64,7 +64,6 @@ Cada poder es un objeto: clic derecho para usarlo. Tienen recarga.
 | Máscara de la Carcajada | **Carcajada**: los monstruos cercanos huyen y quedan debilitados. (30 s) |
 | Bolsa de Confeti | **Lluvia de confeti**: ciega y frena un momento a todo lo que te rodea. (20 s) |
 | Capa de Sombra | **Paso de sombra**: 3 segundos invisible, rápido y los golpes te atraviesan. (25 s) |
-| Máscara Rota | **Forma real**: 10 segundos con su propia skin pero alto y delgado como una sombra. Los monstruos huyen y a los jugadores cercanos se les nubla la vista. (60 s) |
 
 ### Pasivas del Jester
 
