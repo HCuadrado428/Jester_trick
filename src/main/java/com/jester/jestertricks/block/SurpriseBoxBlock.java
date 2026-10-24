@@ -6,6 +6,11 @@ import net.minecraft.world.level.BlockGetter;
 import com.jester.jestertricks.item.Fx;
 import com.jester.jestertricks.registry.ModSounds;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
@@ -30,10 +35,11 @@ import net.minecraft.world.phys.BlockHitResult;
  */
 public class SurpriseBoxBlock extends Block {
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     public SurpriseBoxBlock(Properties props) {
         super(props);
-        registerDefaultState(stateDefinition.any().setValue(OPEN, false));
+        registerDefaultState(stateDefinition.any().setValue(OPEN, false).setValue(FACING, Direction.NORTH));
     }
 
     private static final VoxelShape SHAPE = Block.box(1.5, 0, 1.5, 14.5, 12.5, 14.5);
@@ -50,7 +56,23 @@ public class SurpriseBoxBlock extends Block {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(OPEN);
+        builder.add(OPEN, FACING);
+    }
+
+    /** Se coloca mirando hacia quien la pone. */
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
+        return defaultBlockState().setValue(FACING, ctx.getHorizontalDirection().getOpposite());
+    }
+
+    @Override
+    public BlockState rotate(BlockState state, Rotation rot) {
+        return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
+    }
+
+    @Override
+    public BlockState mirror(BlockState state, Mirror mirror) {
+        return state.rotate(mirror.getRotation(state.getValue(FACING)));
     }
 
     @Override

@@ -1,10 +1,34 @@
 {
   "variants": {
-    "open=false": {
+    "facing=north,open=false": {
       "model": "jestertricks:block/surprise_box"
     },
-    "open=true": {
+    "facing=north,open=true": {
       "model": "jestertricks:block/surprise_box_open"
+    },
+    "facing=east,open=false": {
+      "model": "jestertricks:block/surprise_box",
+      "y": 90
+    },
+    "facing=east,open=true": {
+      "model": "jestertricks:block/surprise_box_open",
+      "y": 90
+    },
+    "facing=south,open=false": {
+      "model": "jestertricks:block/surprise_box",
+      "y": 180
+    },
+    "facing=south,open=true": {
+      "model": "jestertricks:block/surprise_box_open",
+      "y": 180
+    },
+    "facing=west,open=false": {
+      "model": "jestertricks:block/surprise_box",
+      "y": 270
+    },
+    "facing=west,open=true": {
+      "model": "jestertricks:block/surprise_box_open",
+      "y": 270
     }
   }
 }

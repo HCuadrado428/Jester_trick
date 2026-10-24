@@ -130,11 +130,18 @@ public final class PocketManager {
         List<ItemStack> items = new ArrayList<>();
         for (ItemStack s : all) if (!s.isEmpty()) items.add(s);
 
-        double radius = Math.min(30.0, 9.0 + items.size() * 0.8);
+        // Dos anillos bien separados: hasta 10 objetos cerca y el resto en un anillo exterior.
+        int inner = Math.min(items.size(), 10);
+        double radius = 24.0;
         for (int i = 0; i < items.size(); i++) {
-            double a = Math.PI * 2 * i / items.size();
-            double x = c.x + Math.sin(a) * radius;
-            double z = c.z + Math.cos(a) * radius;
+            boolean outer = i >= inner;
+            int n = outer ? items.size() - inner : inner;
+            int k = outer ? i - inner : i;
+            double r = outer ? 46.0 : 24.0;
+            double a = Math.PI * 2 * (k + (outer ? 0.5 : 0.0)) / n;
+            if (outer) radius = 46.0;
+            double x = c.x + Math.sin(a) * r;
+            double z = c.z + Math.cos(a) * r;
             PocketStatueEntity st = PocketStatueEntity.ofItem(pocket, items.get(i), 12.0F);
             spawnFacing(pocket, st, x, z, c);
         }
@@ -147,7 +154,7 @@ public final class PocketManager {
                 float scale = Mth.clamp(9.0F / h, 2.5F, 14.0F);
                 probe.discard();
                 PocketStatueEntity st = PocketStatueEntity.ofMob(pocket, mob, scale);
-                spawnFacing(pocket, st, c.x, c.z - radius - 10.0, c);
+                spawnFacing(pocket, st, c.x, c.z - radius - 16.0, c);
             }
         }
     }
