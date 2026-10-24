@@ -1,23 +1,15 @@
 package com.jester.jestertricks.client;
 
-import com.jester.jestertricks.JesterTricks;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
-import net.minecraft.resources.ResourceLocation;
 
-/** El Jester en su forma real: una figura negra, alta y delgada con la máscara blanca. */
+/** El Jester en su forma real: su propia skin, pero alto y delgado como una sombra. */
 public class TrueFormRenderer extends PlayerRenderer {
-    private static final ResourceLocation SKIN = JesterTricks.id("textures/entity/jester_true_form.png");
 
-    public TrueFormRenderer(EntityRendererProvider.Context ctx) {
-        super(ctx, false);
-    }
-
-    @Override
-    public ResourceLocation getTextureLocation(AbstractClientPlayer player) {
-        return SKIN;
+    public TrueFormRenderer(EntityRendererProvider.Context ctx, boolean slim) {
+        super(ctx, slim);
     }
 
     @Override

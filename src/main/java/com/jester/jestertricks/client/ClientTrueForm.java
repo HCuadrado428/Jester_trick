@@ -17,11 +17,13 @@ import java.util.Map;
 public final class ClientTrueForm {
     private static final Map<Integer, Long> UNTIL = new HashMap<>();
     private static TrueFormRenderer renderer;
+    private static TrueFormRenderer slimRenderer;
     private static boolean rendering;
 
     /** Se llama al recargar los recursos (desde el registro de renderizadores). */
     public static void init(EntityRendererProvider.Context ctx) {
-        renderer = new TrueFormRenderer(ctx);
+        renderer = new TrueFormRenderer(ctx, false);
+        slimRenderer = new TrueFormRenderer(ctx, true);
     }
 
     public static void set(int entityId, int ticks) {
@@ -50,7 +52,7 @@ public final class ClientTrueForm {
         try {
             if (!(event.getEntity() instanceof net.minecraft.client.player.AbstractClientPlayer p)) return;
             float yaw = net.minecraft.util.Mth.lerp(event.getPartialTick(), p.yRotO, p.getYRot());
-            renderer.render(p, yaw, event.getPartialTick(), event.getPoseStack(), event.getMultiBufferSource(), event.getPackedLight());
+            ("slim".equals(p.getModelName()) ? slimRenderer : renderer).render(p, yaw, event.getPartialTick(), event.getPoseStack(), event.getMultiBufferSource(), event.getPackedLight());
         } finally {
             rendering = false;
         }
