@@ -62,7 +62,7 @@ Se aplica al momento, sin reiniciar. El jugador tiene que estar **conectado**.
 | Objeto | Qué hace |
 |---|---|
 | Estrella del Origen | Abre una grieta y te lleva a otra dimensión (posición equivalente, siempre en un sitio seguro). Agachado: eliges destino (mundo normal, Nether o End). |
-| Aro de Feria | Agachado + clic en el suelo: aro **fijo** para siempre (si pones otro fijo, el anterior desaparece). Clic normal: aro temporal. Al saltar por un temporal, este desaparece y apareces en el fijo, aunque esté en otra dimensión. Los temporales sin usar se desvanecen a los 2 minutos. |
+| Aro de Feria | Agachado + clic en el suelo: aro **fijo** para siempre (si pones otro fijo, el anterior desaparece). Clic normal (**sin agacharte**): aro temporal. Al saltar por un temporal, este desaparece y apareces delante del fijo, aunque esté en otra dimensión. El fijo es solo el destino: saltar por él no hace nada (te avisa). Los temporales sin usar se desvanecen a los 2 minutos. |
 | Caja Negra | Clic: bolsillo de 27 huecos que viaja con la caja. Agachado sobre una criatura: se la traga (ni jefes). Agachado en el suelo: la suelta. **Agachado sobre un jugador: lo mete 1 minuto en la dimensión de bolsillo.** Agachado al aire: el Jester entra o sale de su bolsillo. |
 | Baraja del Destino | Sobre otro jugador o criatura: carta mala al azar (Pranked!, levitar, brillar, lentitud, mareo, ceguera, ¡a bailar!, teletransporte...). Al aire: carta buena para ti (fuerza, velocidad, regeneración, resistencia...). |
 | Espejo de la Risa | Salen tres copias del Jester con su skin. Los monstruos van a por ellas y estallan en confeti al golpearlas. |
@@ -133,7 +133,7 @@ Archivo `serverconfig/jestertricks-server.toml` dentro del mundo:
 
 1. Instala **Minecraft Forge 1.20.1** (versión 47.x).
 2. Descarga el mod: en este repositorio ve a **Actions**, abre la compilación más reciente con ✅ y baja **jestertricks-jar** (es un .zip con el .jar dentro).
-3. Copia `jestertricks-1.20.1-1.0.0.jar` a la carpeta `mods`.
+3. Copia `jestertricks-1.20.1-1.0.1.jar` a la carpeta `mods`.
 4. En un servidor, el mod tiene que estar **en el servidor y en todos los jugadores**.
 
 > Cada versión nueva del jar sustituye a la anterior: no mezcles versiones entre servidor y jugadores.

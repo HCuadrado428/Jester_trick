@@ -206,5 +206,7 @@
   "tooltip.jestertricks.confetti_bag.1": "Nunca se vacía. Nadie sabe qué hay al fondo.",
   "item.jestertricks.shadow_cloak": "Capa de Sombra",
   "tooltip.jestertricks.shadow_cloak.0": "Clic derecho: 3 s invisible y veloz; los golpes te atraviesan.",
-  "tooltip.jestertricks.shadow_cloak.1": "Huele a otro mundo."
+  "tooltip.jestertricks.shadow_cloak.1": "Huele a otro mundo.",
+  "message.jestertricks.hoop_temp": "Aro temporal: salta por él y aparecerás en tu aro fijo.",
+  "message.jestertricks.hoop_is_anchor": "Este es tu aro FIJO (el destino). Para viajar, salta por uno temporal (sin agacharte al ponerlo)."
 }

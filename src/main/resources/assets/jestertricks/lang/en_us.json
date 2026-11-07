@@ -206,5 +206,7 @@
   "tooltip.jestertricks.confetti_bag.1": "It never empties. Nobody knows what's at the bottom.",
   "item.jestertricks.shadow_cloak": "Shadow Cloak",
   "tooltip.jestertricks.shadow_cloak.0": "Right click: 3 s invisible and fast; hits pass through you.",
-  "tooltip.jestertricks.shadow_cloak.1": "Smells like another world."
+  "tooltip.jestertricks.shadow_cloak.1": "Smells like another world.",
+  "message.jestertricks.hoop_temp": "Temporary hoop: jump through it to reach your fixed hoop.",
+  "message.jestertricks.hoop_is_anchor": "This is your FIXED hoop (the destination). To travel, jump through a temporary one (placed without sneaking)."
 }

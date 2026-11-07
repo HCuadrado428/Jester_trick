@@ -77,10 +77,21 @@ public class HoopBlock extends HorizontalDirectionalBlock {
 
     @Override
     public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
-        if (level.isClientSide || state.getValue(PERMANENT) || !(entity instanceof ServerPlayer player)) return;
+        if (level.isClientSide || !(entity instanceof ServerPlayer player)) return;
         if (!JesterLock.isJester(player)) return;
         long now = level.getGameTime();
-        if (now - player.getPersistentData().getLong("jestertricks_hoop") < 20) return;
+        if (state.getValue(PERMANENT)) {
+            // El fijo es solo el destino: se avisa (sin spam) para no confundirlo con uno temporal.
+            boolean justArrived = now - player.getPersistentData().getLong("jestertricks_hoop") < 60;
+            if (!justArrived && now - player.getPersistentData().getLong("jestertricks_hoop_hint") > 60) {
+                player.getPersistentData().putLong("jestertricks_hoop_hint", now);
+                player.displayClientMessage(Component.translatable("message.jestertricks.hoop_is_anchor").withStyle(ChatFormatting.GRAY), true);
+            }
+            return;
+        }
+        long last = player.getPersistentData().getLong("jestertricks_hoop");
+        if (last > now) last = 0;   // marca de otra partida o de un reloj distinto: no bloquea
+        if (now - last < 20) return;
         player.getPersistentData().putLong("jestertricks_hoop", now);
 
         GlobalPos anchor = HoopAnchors.get(player.server).get(player.getUUID());
@@ -91,7 +102,15 @@ public class HoopBlock extends HorizontalDirectionalBlock {
         }
         vanish((ServerLevel) level, pos);
         BlockPos a = anchor.pos();
-        player.teleportTo(destLevel, a.getX() + 0.5, a.getY(), a.getZ() + 0.5, player.getYRot(), player.getXRot());
+        // Sale por delante del aro fijo (no metido dentro del aro), si ahí hay hueco.
+        BlockState anchorState = destLevel.getBlockState(a);
+        Direction front = anchorState.hasProperty(FACING) ? anchorState.getValue(FACING) : Direction.NORTH;
+        BlockPos out = a.relative(front);
+        boolean free = destLevel.getBlockState(out).getCollisionShape(destLevel, out).isEmpty()
+                && destLevel.getBlockState(out.above()).getCollisionShape(destLevel, out.above()).isEmpty();
+        BlockPos at = free ? out : a;
+        float yaw = free ? front.toYRot() : player.getYRot();
+        player.teleportTo(destLevel, at.getX() + 0.5, at.getY(), at.getZ() + 0.5, yaw, player.getXRot());
         player.fallDistance = 0.0F;
         player.getPersistentData().putLong("jestertricks_hoop", destLevel.getGameTime());
         Fx.rift(destLevel, new Vec3(a.getX() + 0.5, a.getY() + 1.0, a.getZ() + 0.5), player.getYRot(), 0.9);

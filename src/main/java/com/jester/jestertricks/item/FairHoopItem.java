@@ -65,6 +65,9 @@ public class FairHoopItem extends Item {
             player.displayClientMessage(Component.translatable("message.jestertricks.anchor_set").withStyle(ChatFormatting.WHITE), true);
         } else {
             level.setBlockAndUpdate(pos, state);
+            boolean hasAnchor = HoopAnchors.get(level.getServer()).get(player.getUUID()) != null;
+            player.displayClientMessage(Component.translatable(hasAnchor ? "message.jestertricks.hoop_temp" : "message.jestertricks.no_anchor")
+                    .withStyle(hasAnchor ? ChatFormatting.WHITE : ChatFormatting.GRAY), true);
         }
 
         Vec3 c = Vec3.atCenterOf(pos).add(0, 0.5, 0);
