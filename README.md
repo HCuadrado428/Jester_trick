@@ -1,8 +1,46 @@
-# Jester's Tricks — Forge 1.20.1
+# 🃏 Jester's Tricks — Forge 1.20.1
 
-Armas y trucos del Jester, el bufón arlequín. Todo sale **solo de la pestaña "Jester's Tricks" del modo creativo**: no hay recetas ni botín.
+Las armas, trucos y poderes del **Jester**: un bufón arlequín negro, gris y blanco, con máscara blanca y una flor negra en el sombrero. Es una criatura de otro mundo que lleva una eternidad en el de Minecraft: poderoso, pero también juguetón. Siniestro, pero con humor.
+
+- Todo sale **solo de la pestaña "Jester's Tricks" del modo creativo**: no hay recetas ni botín.
+- **Solo el Jester** puede usar los objetos. Los demás reciben un aviso y una risita.
+- Texturas pixel art 32x32 con los colores de su skin. Varias armas son 3D en la mano.
+- En español e inglés.
+
+*English: a Forge 1.20.1 mod with clown and jester magic weapons, usable only by the player chosen as the Jester (`/jester add <player>`). The game text is translated into English.*
+
+---
+
+## 👑 Cómo hacer a alguien Jester
+
+Hace falta ser **operador** (en un mundo de un jugador, tener los **trucos activados**).
+
+```
+/jester add NombreDelJugador
+```
+
+Se aplica al momento, sin reiniciar. El jugador tiene que estar **conectado**.
+
+| Comando | Qué hace |
+|---|---|
+| `/jester add <jugador>` | Lo convierte en Jester (puede haber varios) |
+| `/jester remove <jugador>` | Le quita el poder (aunque no esté conectado) |
+| `/jester list` | Dice quién es Jester |
+| `/jester clear` | Vacía la lista: **cualquiera** puede usar los objetos |
+
+> ⚠️ Mientras la lista esté vacía, **todo el mundo** puede usar los objetos (sirve para probar el mod). En cuanto añades a un Jester, solo él puede.
+
+**Cómo ser operador:**
+- **Servidor:** en la consola del servidor escribe `op NombreDelJugador`.
+- **Un jugador:** crea el mundo con *Permitir trucos* activado, o en un mundo ya creado pulsa *Esc → Abrir en LAN → Permitir trucos: Sí → Empezar*.
+
+**A mano, sin comando:** arranca el mundo una vez con el mod, abre `saves/<mundo>/serverconfig/jestertricks-server.toml` (en un servidor, `world/serverconfig/...`), pon `jesterNames = ["NombreDelJugador"]` y reinicia. El nombre no distingue mayúsculas.
+
+---
 
 ## Objetos
+
+![Objetos del mod](vista_previa/objetos.png)
 
 | Objeto | Qué hace |
 |---|---|
@@ -12,11 +50,11 @@ Armas y trucos del Jester, el bufón arlequín. Todo sale **solo de la pestaña 
 | Mazo de Goma | Poco daño, retroceso enorme y "¡boing!". Clic derecho: martillazo al suelo. 3D en la mano, 2D en el inventario. |
 | Pistola BANG! | Dispara banderitas de payaso. Explotan: 4 corazones que atraviesan armadura y **nunca matan**, y aplican **Pranked!** 10 s. 3D en la mano. |
 | Chistera | Saca un conejo, un objeto al azar (a veces muy bueno) o murciélagos. |
-| Varita | Intercambia tu posición con una criatura. Agachado: teletransporte a donde miras. |
+| Varita | Intercambia tu posición con una criatura. Agachado: teletransporte a donde miras. Abre mini portales en cada extremo del salto. |
 | Bomba de Humo | Invisibilidad + Velocidad III, ciega a todo lo cercano y te pierden de vista. |
 | Pañuelos Infinitos | Gancho: te lleva al bloque o atrae criaturas. Agáchate para soltarte. |
 | Flor de Solapa | Chorro de agua: empuja, apaga fuego y destroza a Endermen y Blazes. |
-| Caja Sorpresa (bloque) | Al pisarla o abrirla sale el Jester y te lanza por los aires. |
+| Caja Sorpresa (bloque) | Al pisarla o abrirla sale el Jester y te lanza por los aires. Se coloca mirando hacia ti. |
 | Cojín de Pedorretas (bloque) | Quien lo pisa suelta una pedorreta y queda mareado. |
 
 ### Poderes de su mundo de origen
@@ -31,13 +69,11 @@ Armas y trucos del Jester, el bufón arlequín. Todo sale **solo de la pestaña 
 | Cascabeles | Todo lo que hay a 10 bloques se pone a bailar, y los invisibles dejan de serlo y brillan. |
 | Caja de Muñecos | Salen 3 muñecos arlequín (Jesters en miniatura) que le siguen a saltitos, atacan a quien le ataca o a quien él ataca, y estallan en confeti al caer. Agachado: vuelven a la caja. |
 
-La Varita ahora abre mini portales en cada extremo del salto.
-
 ### La dimensión de bolsillo
 
 Dentro de la Caja Negra hay un mundo: un suelo infinito de rombos arlequín bajo un cielo negro, donde el horizonte se pierde en la niebla.
 
-- Quien es tragado ve, **en gigante**, todo lo que el Jester guarda en la Caja: los objetos del bolsillo como estatuas enormes en círculo, y la criatura tragada al fondo. Nadie puede tocarlos, solo mirarlos mientras camina.
+- Quien es tragado ve, **en gigante**, todo lo que el Jester guarda en la Caja: los objetos del bolsillo como estatuas enormes y bien separadas (hasta 10 en un círculo cercano y el resto en otro más lejano), y la criatura tragada al fondo del todo. Nadie puede tocarlos, solo mirarlos mientras camina.
 - Dentro **no se puede romper, poner, usar objetos ni pegar**, y nadie recibe daño.
 - Se oyen risas lejanas y susurros, y flotan estrellas del origen.
 - Sale solo al **minuto** (lleva una cuenta atrás), y vuelve justo a donde estaba.
@@ -55,9 +91,9 @@ Dentro de la Caja Negra hay un mundo: un suelo infinito de rombos arlequín bajo
 
 **Decoración** (cualquiera puede colocarla): Bloque, Losa y Escaleras Arlequín, Lona de Carpa y su losa, Farolillo de Feria y Cartel de Feria.
 
-### Poderes (objetos)
+### Poderes
 
-Cada poder es un objeto: clic derecho para usarlo. Tienen recarga.
+Cada poder es un objeto: clic derecho para usarlo. No hay teclas. Tienen recarga.
 
 | Objeto | Poder |
 |---|---|
@@ -79,45 +115,39 @@ Cada arma tiene su propio mensaje de muerte ("X se llevó una tarta en la cara d
 
 Los proyectiles (naipe, cuchillo, banderita y nudo de pañuelos) vuelan con modelos 3D.
 
-## Solo para el Jester
+---
 
-Todos los objetos funcionan únicamente para los jugadores que sean Jester. Los demás reciben un aviso y una risita.
+## ⚙️ Configuración
 
-La forma más fácil es con el comando (solo operadores, se aplica al momento sin reiniciar):
+Archivo `serverconfig/jestertricks-server.toml` dentro del mundo:
 
-| Comando | Qué hace |
+| Ajuste | Qué hace |
 |---|---|
-| `/jester add <jugador>` | Lo convierte en Jester |
-| `/jester remove <jugador>` | Le quita el poder (aunque no esté conectado) |
-| `/jester list` | Dice quién es Jester |
-| `/jester clear` | Nadie es Jester (cualquiera puede usar los objetos) |
+| `jesterNames` | Lista de jugadores Jester (lo mismo que `/jester add`) |
+| `damageMultiplier` | Multiplica el daño de todo (1.0 normal, 0.5 la mitad, 2.0 el doble) |
+| `cooldownMultiplier` | Multiplica las recargas (0.5 el doble de rápido, 2.0 el doble de lento) |
 
-También se puede hacer a mano en el archivo de configuración:
+---
 
-1. Arranca el mundo o el servidor una vez con el mod.
-2. Abre `world/serverconfig/jestertricks-server.toml` (en un servidor, dentro de la carpeta del mundo).
-3. Pon el nombre del Jester: `jesterNames = ["NombreDelJester"]`.
-4. Reinicia.
+## 📥 Instalar
 
-Si la lista está vacía, cualquiera puede usarlos (así se puede probar el mod).
+1. Instala **Minecraft Forge 1.20.1** (versión 47.x).
+2. Descarga el mod: en este repositorio ve a **Actions**, abre la compilación más reciente con ✅ y baja **jestertricks-jar** (es un .zip con el .jar dentro).
+3. Copia `jestertricks-1.20.1-1.0.0.jar` a la carpeta `mods`.
+4. En un servidor, el mod tiene que estar **en el servidor y en todos los jugadores**.
 
-En el mismo archivo, en `[balance]`:
-- `damageMultiplier`: multiplica el daño de todas las armas y trucos (1.0 normal, 0.5 la mitad, 2.0 el doble).
-- `cooldownMultiplier`: multiplica los tiempos de recarga (0.5 el doble de rápido, 2.0 el doble de lento).
+> Cada versión nueva del jar sustituye a la anterior: no mezcles versiones entre servidor y jugadores.
 
-## Compilar el .jar
+## 🔨 Compilar tú mismo
 
 1. Instala **JDK 17** (por ejemplo, Temurin 17).
-2. Abre una terminal en esta carpeta y ejecuta:
-   - Windows: `gradlew.bat build`
-   - Mac/Linux: `./gradlew build`
-3. La primera vez tarda (descarga Minecraft y Forge). El mod queda en `build/libs/jestertricks-1.20.1-1.0.0.jar`.
-4. Copia ese .jar a la carpeta `mods` de tu Minecraft con Forge 1.20.1 (47.x).
+2. En esta carpeta: `gradlew.bat build` (Windows) o `./gradlew build` (Mac/Linux).
+3. El jar queda en `build/libs/`. Para probar sin instalar: `gradlew runClient`.
 
-Para probarlo sin instalar: `gradlew runClient`.
+Cada vez que se sube un cambio a GitHub, **Actions** lo compila automáticamente.
 
-## Retocar
+## 🎨 Retocar
 
-- Texturas (pixel art 32x32): `src/main/resources/assets/jestertricks/textures/`.
-- Modelos 3D: `src/main/resources/assets/jestertricks/models/item/*_3d.json` (se abren con Blockbench). Ahí puedes ajustar cómo se sostienen en la mano (sección `display`).
-- Textos en español e inglés: `assets/jestertricks/lang/es_es.json` y `en_us.json`.
+- Texturas: `src/main/resources/assets/jestertricks/textures/`
+- Modelos 3D (se abren con Blockbench): `assets/jestertricks/models/item/*_3d.json`, sección `display` para cómo se sostienen.
+- Textos: `assets/jestertricks/lang/es_es.json` y `en_us.json`
